@@ -53,23 +53,47 @@ def run_simulation():
 
     st.title('Simulador de Portafolio de Inversiones')
 
-    number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=2, step=1)
-    start = st.text_input('Ingrese la fecha de inicio (YYYY-MM-DD):', '2020-01-01')
-    end = st.text_input('Ingrese la fecha de cierre (YYYY-MM-DD):', '2021-01-01')
+    # Almacena el número de activos y las fechas en session_state para persistencia
+    if 'number_assets' not in st.session_state:
+        st.session_state['number_assets'] = 2
+    if 'start' not in st.session_state:
+        st.session_state['start'] = '2020-01-01'
+    if 'end' not in st.session_state:
+        st.session_state['end'] = '2021-01-01'
 
-    daily_prices = pd.DataFrame()
-    daily_returns = pd.DataFrame()
+    number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=st.session_state['number_assets'], step=1)
+    st.session_state['number_assets'] = number_assets
+    start = st.text_input('Ingrese la fecha de inicio (YYYY-MM-DD):', st.session_state['start'])
+    st.session_state['start'] = start
+    end = st.text_input('Ingrese la fecha de cierre (YYYY-MM-DD):', st.session_state['end'])
+    st.session_state['end'] = end
 
+    # Inicializa los tickers en session_state
+    for i in range(number_assets):
+        if f'asset_{i}' not in st.session_state:
+            st.session_state[f'asset_{i}'] = ''
+
+    # Crea los campos de texto para los tickers
+    tickers = []
+    for i in range(number_assets):
+        ticker = st.text_input(f'Ingrese el ticker del valor n°{i+1} a usar:', key=f'asset_{i}')
+        tickers.append(ticker)
+
+    # Botón para realizar la simulación
     if st.button('Obtener datos y realizar simulación'):
         with st.spinner('Obteniendo datos...'):
-            for i in range(number_assets):
-                asset_input = st.text_input(f'Ingrese el ticker del valor n°{i+1} a usar:', key=f'asset_{i}')
-                if asset_input:
-                    asset_data = pdr.get_data_yahoo(asset_input, start, end)
-                    daily_prices[asset_input] = asset_data['Adj Close']
-                    daily_returns[asset_input] = np.log(daily_prices[asset_input] / daily_prices[asset_input].shift(1))
+            daily_prices = pd.DataFrame()
+            daily_returns = pd.DataFrame()
+
+            for i, ticker in enumerate(tickers):
+                if ticker:  # Asegurarse de que el ticker no esté vacío
+                    asset_data = pdr.get_data_yahoo(ticker, start, end)
+                    daily_prices[ticker] = asset_data['Adj Close']
+                    daily_returns[ticker] = np.log(daily_prices[ticker] / daily_prices[ticker].shift(1))
 
             daily_returns.dropna(inplace=True)
 
             if not daily_returns.empty:
                 perform_simulation(daily_returns, number_assets)
+            else:
+                st.error('No se pudieron obtener datos para los tickers proporcionados.')
