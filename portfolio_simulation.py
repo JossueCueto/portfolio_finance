@@ -66,8 +66,8 @@ def perform_simulation(daily_returns, number_assets,tickers):
     df = pd.DataFrame({'Ticker': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
     
     #PARTE 6: EXHIBICIÓN DE RESULTADOS
-    # Usar st.beta_columns para crear dos columnas
-    col1, col2 = st.beta_columns(2)
+    # Usar st.columns para crear dos columnas
+    col1, col2 = st.columns(2)
 
     # En la primera columna, mostrar información textual y DataFrame
     with col1:
