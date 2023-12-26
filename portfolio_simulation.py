@@ -7,7 +7,7 @@ import yfinance as yf
 import datetime as dt
 
 # PARTE 2: SIMULACIÓN DE PESOS DE PORTAFOLIO
-def perform_simulation(daily_returns, number_assets):
+def perform_simulation(daily_returns, number_assets,tickers):
     np.random.seed(10)
     npor = int(1e4)
     n_asset = number_assets
@@ -54,11 +54,20 @@ def perform_simulation(daily_returns, number_assets):
     plt.xlim(min_risk-0.05, max_risk+0.05)
     plt.ylim(min_rets-0.05,max_rets+0.05)
     
-
+    #PARTE 5: GENERAR TABLA DE CARTERA
+    
+    # Extrayendo los vectores
+    vector1 = tickers
+    vector2 = ws[max_sharpe_location, :]
+    vector3 = daily_returns.mean()*Annual_units
+    vector4=daily_returns.std()
+    
+    # Creando el DataFrame
+    df = pd.DataFrame({'Ticker': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
     
     #PARTE 6: EXHIBICIÓN DE RESULTADOS
     # Mostrando el DataFrame resultante
-    print(tickers)
+    print(df)
     plt.show()
     print(f'El mayor ratio de Sharpe es {max_sharpe}')
     print(f'La desviación estándar del portafolio con mayor ratio de sharpe es {max_sharpe_std}')
@@ -116,6 +125,6 @@ def run_simulation():
             daily_returns.dropna(axis=0)
 
             if not daily_returns.empty:
-                perform_simulation(daily_returns, number_assets)
+                perform_simulation(daily_returns, number_assets,tickers)
             else:
                 st.error('No se pudieron obtener datos para los tickers proporcionados.')
