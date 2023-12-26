@@ -21,7 +21,7 @@ st.set_page_config(page_title='mehul gupta\'s portfolio', layout="wide", page_ic
 # st.sidebar.markdown(info['Stackoverflow_flair'],unsafe_allow_html=True)
 
 st.subheader('Summary')
-st.write(info['Brief'])
+#st.write(info['Brief'])
 
 st.subheader('Career snapshot')
 
@@ -32,21 +32,21 @@ st.subheader('Career snapshot')
 #         timeline(data, height=500)
 
 st.subheader('Skills & Tools ⚒️')
-def skill_tab():
-    rows, cols = len(info['skills']) // skill_col_size, skill_col_size
-    skills = iter(info['skills'])
-    if len(info['skills']) % skill_col_size != 0:
-        rows += 1
-    for x in range(rows):
-        columns = st.columns(skill_col_size)
-        for index_ in range(skill_col_size):
-            try:
-                columns[index_].button(next(skills))
-            except:
-                break
+#def skill_tab():
+#    rows, cols = len(info['skills']) // skill_col_size, skill_col_size
+#    skills = iter(info['skills'])
+#    if len(info['skills']) % skill_col_size != 0:
+#        rows += 1
+#    for x in range(rows):
+#        columns = st.columns(skill_col_size)
+#        for index_ in range(skill_col_size):
+#            try:
+#                columns[index_].button(next(skills))
+#            except:
+#                break
 
-with st.spinner(text="Loading section..."):
-    skill_tab()
+#with st.spinner(text="Loading section..."):
+#    skill_tab()
 
 st.subheader('Education 📖')
 
@@ -83,7 +83,7 @@ st.subheader('Research Papers 📝')
 # paper_summary(1)
 
 st.subheader('Achievements 🥇')
-achievement_list = ''.join(['<li>' + item + '</li>' for item in info['achievements']])
+#achievement_list = ''.join(['<li>' + item + '</li>' for item in info['achievements']])
 st.markdown('<ul>' + achievement_list + '</ul>', unsafe_allow_html=True)
 
 # Comentado ya que depende de recursos externos
