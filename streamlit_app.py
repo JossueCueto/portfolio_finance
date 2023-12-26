@@ -4,7 +4,7 @@ import streamlit as st
 st.title('Mi Aplicación de Data Science')
 
 # Ajusta el tamaño de la imagen y cárgala en la barra lateral
-st.sidebar.image('path_to_image.jpg', caption='Tu Nombre', width=150)
+st.sidebar.image('foto.jpg', caption='Tu Nombre', width=150)
 
 # Menú desplegable en la barra lateral
 menu = st.sidebar.selectbox('Menu', ['Sobre mi', 'Trabajos'])
