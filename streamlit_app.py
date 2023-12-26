@@ -11,9 +11,9 @@ import re
 import io
 import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
-from graph_builder import *
+#from graph_builder import *
 #import tensorflow as tf
-from streamlit_player import st_player
+#from streamlit_player import st_player
 
 st.set_page_config(page_title='mehul gupta\'s portfolio', layout="wide", page_icon='👨‍🔬')
 
