@@ -7,7 +7,7 @@ import yfinance as yf
 import datetime as dt
 
 # PARTE 2: SIMULACIÓN DE PESOS DE PORTAFOLIO
-def perform_simulation(daily_returns, number_assets,tickers):
+def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     np.random.seed(10)
     npor = int(1e4)
     n_asset = number_assets
@@ -57,10 +57,10 @@ def perform_simulation(daily_returns, number_assets,tickers):
     #PARTE 5: GENERAR TABLA DE CARTERA
     
     # Extrayendo los vectores
-    vector1 = tickers
+    vector1 = industry_data
     vector2 = ws[max_sharpe_location, :]
     vector3 = daily_returns.mean()*Annual_units
-    vector4=daily_returns.std()
+    vector4 = daily_returns.std()
     
     # Creando el DataFrame
     df = pd.DataFrame({'Ticker': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
@@ -122,16 +122,19 @@ def run_simulation():
         with st.spinner('Obteniendo datos...'):
             daily_prices = pd.DataFrame()
             daily_returns = pd.DataFrame()
-
+            industry_data=[]
+            
             for ticker in tickers:
                 if ticker:  # Asegurarse de que el ticker no esté vacío
                     asset_data = pdr.get_data_yahoo(ticker, start, end)
                     daily_prices[ticker] = asset_data['Adj Close']
                     daily_returns[ticker] = np.log(daily_prices[ticker] / daily_prices[ticker].shift(1))
+                    industry=yf.Ticker(asset_input).info.get('industry', 'Industria no disponible')
+                    industry_data=np.append(industry_data, industry)
 
             daily_returns.dropna(axis=0)
 
             if not daily_returns.empty:
-                perform_simulation(daily_returns, number_assets,tickers)
+                perform_simulation(daily_returns, number_assets,tickers,industry_data)
             else:
                 st.error('No se pudieron obtener datos para los tickers proporcionados.')
