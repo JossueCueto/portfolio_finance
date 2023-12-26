@@ -5,3 +5,5 @@ pandas
 requests
 streamlit
 typing-extensions
+yfinance
+pandas_datareader
