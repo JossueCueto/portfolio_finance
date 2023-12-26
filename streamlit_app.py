@@ -4,7 +4,7 @@ import streamlit as st
 st.title('Mi Aplicación de Data Science')
 
 # Sección de perfil o resumen
-st.sidebar.image('path_to_image.jpg', caption='Tu Nombre')
+st.sidebar.image('foto.jpg', caption='Jossue Cueto')
 st.sidebar.write("Breve resumen sobre ti o tu experiencia")
 st.sidebar.write("Otra información relevante")
 st.sidebar.write("Contacto: tu_email@example.com")
