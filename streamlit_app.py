@@ -3,13 +3,19 @@ import streamlit as st
 # Encabezado de la aplicación
 st.title('Mi Aplicación de Data Science')
 
-# Sección de perfil o resumen
-st.sidebar.image('foto.jpg', caption='Jossue Cueto')
-st.sidebar.write("Breve resumen sobre ti o tu experiencia")
-st.sidebar.write("Otra información relevante")
-st.sidebar.write("Contacto: tu_email@example.com")
+# Ajusta el tamaño de la imagen y cárgala en la barra lateral
+st.sidebar.image('path_to_image.jpg', caption='Tu Nombre', width=150)
 
-# Descargar el resumen
+# Menú desplegable en la barra lateral
+menu = st.sidebar.selectbox('Menu', ['Sobre mi', 'Trabajos'])
+
+# Muestra la información basada en la selección del menú
+if menu == 'Sobre mi':
+    st.sidebar.write("Información sobre mí")
+elif menu == 'Trabajos':
+    st.sidebar.write("Información sobre mis trabajos anteriores o proyectos")
+
+# Botón para descargar el resumen
 st.sidebar.download_button('Descargar Resumen', 'path_to_resume.pdf', 'Tu Resumen.pdf')
 
 # Sección principal de la aplicación
