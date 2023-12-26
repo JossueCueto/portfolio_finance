@@ -66,12 +66,20 @@ def perform_simulation(daily_returns, number_assets,tickers):
     df = pd.DataFrame({'Ticker': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
     
     #PARTE 6: EXHIBICIÓN DE RESULTADOS
-    # Mostrando el DataFrame resultante
-    #print(df)
-    plt.show()
-    print(f'El mayor ratio de Sharpe es {max_sharpe}')
-    print(f'La desviación estándar del portafolio con mayor ratio de sharpe es {max_sharpe_std}')
-    print(f'El retorno del portafolio con mayor ratio de sharpe es {max_sharpe_rets}')
+    # Usar st.beta_columns para crear dos columnas
+    col1, col2 = st.beta_columns(2)
+
+    # En la primera columna, mostrar información textual y DataFrame
+    with col1:
+        st.write(f'El mayor ratio de Sharpe es {max_sharpe}')
+        st.write(f'La desviación estándar del portafolio con mayor ratio de sharpe es {max_sharpe_std}')
+        st.write(f'El retorno del portafolio con mayor ratio de sharpe es {max_sharpe_rets}')
+        st.dataframe(df)  # Mostrar el DataFrame
+        # En la segunda columna, mostrar el gráfico
+    with col2:
+        # Para mostrar un gráfico matplotlib en Streamlit
+        st.pyplot(plt)
+        # Nota: no es necesario llamar a plt.show() cuando se usa st.pyplot()
 
 def run_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
