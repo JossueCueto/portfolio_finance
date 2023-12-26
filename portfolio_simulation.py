@@ -5,6 +5,7 @@ import pandas_datareader.data as pdr
 import matplotlib.pyplot as plt
 import yfinance as yf
 import datetime as dt
+from risk_free import risk_free_function as rf
 
 # PARTE 2: SIMULACIÓN DE PESOS DE PORTAFOLIO
 def perform_simulation(daily_returns, number_assets,tickers,industry_data):
