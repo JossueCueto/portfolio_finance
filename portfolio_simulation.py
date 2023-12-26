@@ -40,11 +40,11 @@ def perform_simulation(daily_returns, number_assets):
     min_rets=port_rets.min()
     max_rets=port_rets.max()
 
-    plt.scatter(max_sharpe_std, max_sharpe_rets, c='red', s=50, marker='*')
+    plt.scatter(max_sharpe_std, max_sharpe_rets, c='red', s=50)
     plt.title('Portfolio Optimization with the Sharpe Ratio')
     
     # Agregar líneas de utilidad
-    valores_utilidad=np.linspace(0, 100,50)
+    valores_utilidad=np.linspace(0, 100,75)
     valores_utilidad=np.append(valores_utilidad,max_sharpe)
     valores_x=np.linspace(0, 100,25)
     for utilidad in valores_utilidad:
