@@ -53,8 +53,26 @@ def perform_simulation(daily_returns, number_assets):
 
     plt.xlim(min_risk-0.05, max_risk+0.05)
     plt.ylim(min_rets-0.05,max_rets+0.05)
-
-    st.pyplot(plt)
+    
+    #PARTE 5: GENERAR TABLA DE CARTERA
+    
+    # Extrayendo los vectores
+    vector1 = asset_data
+    vector2 = ws[max_sharpe_location, :]
+    vector3 = daily_returns.mean()*Annual_units
+    vector4=daily_returns[asset_data].std()
+    
+    # Creando el DataFrame
+    df = pd.DataFrame({'Ticker': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
+    
+    #PARTE 6: EXHIBICIÓN DE RESULTADOS
+    # Mostrando el DataFrame resultante
+    print(df)
+    plt.show()
+    print(f'El mayor ratio de Sharpe es {max_sharpe}')
+    print(f'La desviación estándar del portafolio con mayor ratio de sharpe es {max_sharpe_std}')
+    print(f'El retorno del portafolio con mayor ratio de sharpe es {max_sharpe_rets}')
+    print(cartera_dataframe)
 
 def run_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
