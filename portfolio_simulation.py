@@ -67,7 +67,7 @@ def perform_simulation(daily_returns, number_assets,tickers):
     
     #PARTE 6: EXHIBICIÓN DE RESULTADOS
     # Mostrando el DataFrame resultante
-    print(df)
+    #print(df)
     plt.show()
     print(f'El mayor ratio de Sharpe es {max_sharpe}')
     print(f'La desviación estándar del portafolio con mayor ratio de sharpe es {max_sharpe_std}')
