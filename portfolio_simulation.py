@@ -4,6 +4,7 @@ import pandas as pd
 import pandas_datareader.data as pdr
 import matplotlib.pyplot as plt
 import yfinance as yf
+import datetime as dt
 
 # PARTE 2: SIMULACIÓN DE PESOS DE PORTAFOLIO
 def perform_simulation(daily_returns, number_assets):
@@ -65,9 +66,9 @@ def run_simulation():
     if 'number_assets' not in st.session_state:
         st.session_state['number_assets'] = 2
     if 'start' not in st.session_state:
-        st.session_state['start'] = '2020-01-01'
+        st.session_state['start'] = dt.date.today() - dt.timedelta(days=365)
     if 'end' not in st.session_state:
-        st.session_state['end'] = '2021-01-01'
+        st.session_state['end'] = dt.date.today()
 
     # Almacena el número de activos y las fechas que se escriban
     number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=st.session_state['number_assets'], step=1)
