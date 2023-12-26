@@ -29,21 +29,23 @@ def perform_simulation(daily_returns, number_assets):
     plt.ylabel('Expected Return')
     plt.colorbar(label='Sharpe Ratio')
 
-    max_sharpe_idx = np.argmax(port_sharpe)
-    max_sharpe_std = port_std[max_sharpe_idx]
-    max_sharpe_rets = port_rets[max_sharpe_idx]
+    max_sharpe=port_sharpe.max()
+    max_sharpe_location=int(port_sharpe.argmax())
+    max_sharpe_rets=port_rets[max_sharpe_location]
+    max_sharpe_std=port_std[max_sharpe_location]
 
     plt.scatter(max_sharpe_std, max_sharpe_rets, c='red', s=50, marker='*')
     plt.title('Portfolio Optimization with the Sharpe Ratio')
     
     # Agregar líneas de utilidad
-    valores_utilidad = np.linspace(0, max_sharpe, 50)
-    valores_x = np.linspace(min(port_std), max(port_std), 100)
+    valores_utilidad=np.linspace(0, 100,50)
+    valores_utilidad=np.append(valores_utilidad,max_sharpe)
+    valores_x=np.linspace(0, 100,25)
     for utilidad in valores_utilidad:
         plt.plot(valores_x, utilidad * valores_x, 'k-', linewidth=0.5, alpha=0.5)
 
-    plt.xlim(min(port_std), max(port_std))
-    plt.ylim(min(port_rets), max(port_rets))
+    plt.xlim(min_risk-0.05, max_risk+0.05)
+    plt.ylim(min_rets-0.05,max_rets+0.05)
 
     st.pyplot(plt)
 
