@@ -91,7 +91,7 @@ def run_simulation():
                     daily_prices[ticker] = asset_data['Adj Close']
                     daily_returns[ticker] = np.log(daily_prices[ticker] / daily_prices[ticker].shift(1))
 
-            daily_returns.dropna(inplace=True)
+            daily_returns.dropna(axis=0)
 
             if not daily_returns.empty:
                 perform_simulation(daily_returns, number_assets)
