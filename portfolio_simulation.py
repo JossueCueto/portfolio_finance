@@ -18,13 +18,14 @@ def perform_simulation(daily_returns, number_assets):
 
     for portafolio in range(npor):
         w = np.array(np.random.random(n_asset))
-        w /= np.sum(w)
+        w = w/np.sum(w)
         ws[portafolio, :] = w
         port_rets[portafolio] = np.sum(daily_returns.mean() * w * Annual_units)
         port_std[portafolio] = np.sqrt(np.dot(w.T, np.dot(daily_returns.cov() * Annual_units, w)))
         port_sharpe[portafolio] = port_rets[portafolio] / port_std[portafolio]
 
     plt.scatter(port_std, port_rets, c=port_sharpe, cmap='viridis', s=10)
+    
     plt.xlabel('Risk')
     plt.ylabel('Expected Return')
     plt.colorbar(label='Sharpe Ratio')
@@ -60,7 +61,7 @@ def run_simulation():
 
     st.title('Simulador de Portafolio de Inversiones')
 
-    # Almacena el número de activos y las fechas en session_state para persistencia
+    # Almacena el número de activos y las fechas en session_state para persistencia (valores por defecto)
     if 'number_assets' not in st.session_state:
         st.session_state['number_assets'] = 2
     if 'start' not in st.session_state:
@@ -68,6 +69,7 @@ def run_simulation():
     if 'end' not in st.session_state:
         st.session_state['end'] = '2021-01-01'
 
+    # Almacena el número de activos y las fechas que se escriban
     number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=st.session_state['number_assets'], step=1)
     st.session_state['number_assets'] = number_assets
     start = st.text_input('Ingrese la fecha de inicio (YYYY-MM-DD):', st.session_state['start'])
@@ -76,6 +78,8 @@ def run_simulation():
     st.session_state['end'] = end
 
     # Inicializa los tickers en session_state
+    # st.session_state es una herramienta para mantener información entre diferentes ejecuciones del script.
+    # actúa como un diccionario que Streamlit utiliza para recordar información a lo largo de la interacción del usuario con la aplicación web.
     for i in range(number_assets):
         if f'asset_{i}' not in st.session_state:
             st.session_state[f'asset_{i}'] = ''
@@ -84,6 +88,7 @@ def run_simulation():
     tickers = []
     for i in range(number_assets):
         ticker = st.text_input(f'Ingrese el ticker del valor n°{i+1} a usar:', key=f'asset_{i}')
+        #Se crea una lista tickers con los ticker ingresados en los campos de texto
         tickers.append(ticker)
 
     # Botón para realizar la simulación
@@ -92,7 +97,7 @@ def run_simulation():
             daily_prices = pd.DataFrame()
             daily_returns = pd.DataFrame()
 
-            for i, ticker in enumerate(tickers):
+            for ticker in tickers:
                 if ticker:  # Asegurarse de que el ticker no esté vacío
                     asset_data = pdr.get_data_yahoo(ticker, start, end)
                     daily_prices[ticker] = asset_data['Adj Close']
