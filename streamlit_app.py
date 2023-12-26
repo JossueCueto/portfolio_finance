@@ -1,4 +1,5 @@
 import streamlit as st
+from portfolio_simulation import run_simulation
 
 # Encabezado de la aplicación
 st.title('Mi Aplicación de Data Science')
@@ -29,14 +30,7 @@ if menu == 'Sobre mi':
     st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
     # Puedes agregar más secciones aquí relacionadas con 'Sobre mi'
 elif menu == 'Trabajos':
-    # Contenido de 'Trabajos'
-    st.header('Proyectos y Trabajos')
-    # Aquí puedes incluir un enlace a tu trabajo o código para ejecutar un proyecto específico
-    st.write('Aquí puedes agregar enlaces a tus proyectos de GitHub, descripciones, etc.')
-    # Suponiendo que tienes un enlace a tu app de Streamlit compartida en GitHub:
-    st.markdown('Visita [Mi Proyecto en GitHub](https://github.com/usuario/repositorio)')
-    # O si quieres mostrar el contenido de otro archivo .py que está en tu repo y quieres ejecutarlo aquí:
-    # exec(open('path_to_project_file.py').read())
+    run_simulation()
 
 # Para ejecutar la aplicación, guarda el código en un archivo .py y ejecútalo con el comando:
 # streamlit run tu_archivo.py
