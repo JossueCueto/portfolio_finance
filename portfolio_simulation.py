@@ -34,6 +34,11 @@ def perform_simulation(daily_returns, number_assets):
     max_sharpe_rets=port_rets[max_sharpe_location]
     max_sharpe_std=port_std[max_sharpe_location]
 
+    min_risk=port_std.min()
+    max_risk=port_std.max()
+    min_rets=port_rets.min()
+    max_rets=port_rets.max()
+
     plt.scatter(max_sharpe_std, max_sharpe_rets, c='red', s=50, marker='*')
     plt.title('Portfolio Optimization with the Sharpe Ratio')
     
