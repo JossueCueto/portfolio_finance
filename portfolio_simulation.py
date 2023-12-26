@@ -72,7 +72,6 @@ def perform_simulation(daily_returns, number_assets,tickers):
     print(f'El mayor ratio de Sharpe es {max_sharpe}')
     print(f'La desviación estándar del portafolio con mayor ratio de sharpe es {max_sharpe_std}')
     print(f'El retorno del portafolio con mayor ratio de sharpe es {max_sharpe_rets}')
-    print(cartera_dataframe)
 
 def run_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
