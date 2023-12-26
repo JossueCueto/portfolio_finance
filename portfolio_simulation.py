@@ -63,7 +63,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     vector4 = daily_returns.std()
     
     # Creando el DataFrame
-    df = pd.DataFrame({'Ticker': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
+    df = pd.DataFrame({'Industria': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
     
     #PARTE 6: EXHIBICIÓN DE RESULTADOS
     # Usar st.columns para crear dos columnas
@@ -129,7 +129,7 @@ def run_simulation():
                     asset_data = pdr.get_data_yahoo(ticker, start, end)
                     daily_prices[ticker] = asset_data['Adj Close']
                     daily_returns[ticker] = np.log(daily_prices[ticker] / daily_prices[ticker].shift(1))
-                    industry=yf.Ticker(asset_input).info.get('industry', 'Industria no disponible')
+                    industry=yf.Ticker(ticker).info.get('industry', 'Industria no disponible')
                     industry_data=np.append(industry_data, industry)
 
             daily_returns.dropna(axis=0)
