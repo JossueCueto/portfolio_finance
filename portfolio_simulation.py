@@ -1,4 +1,4 @@
-import streamlit as st
+}import streamlit as st
 import numpy as np
 import pandas as pd
 import pandas_datareader.data as pdr
@@ -57,10 +57,10 @@ def perform_simulation(daily_returns, number_assets):
     #PARTE 5: GENERAR TABLA DE CARTERA
     
     # Extrayendo los vectores
-    vector1 = asset_data
+    vector1 = tickers
     vector2 = ws[max_sharpe_location, :]
     vector3 = daily_returns.mean()*Annual_units
-    vector4=daily_returns[asset_data].std()
+    vector4=daily_returns.std()
     
     # Creando el DataFrame
     df = pd.DataFrame({'Ticker': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
