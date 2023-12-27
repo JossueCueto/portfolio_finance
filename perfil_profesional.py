@@ -15,7 +15,7 @@ def run_perfil_profesional():
   - **Evaluación del Riesgo Crediticio**: Evaluación de la calidad crediticia para la compra de un bono corporativo de la empresa H2Olmos usando métricas de riesgo de crédito.
   - **Budget de Flujo de Caja y P&L**: Estimación de los resultados financieros de la compañía Netflix en los últimos 2 trimestres del 2023.
   """)
-  st.subheader('Objetivos Profesionales para el 2024')
+  st.header('Objetivos Profesionales para el 2024')
   st.subheader('CEFA - BCRP')
   st.write('Al haber sido seleccionado para participar en el Curso de Extensión de Finanzas Avanzadas ' + 
             '(CEFA) organizado por el BCRP a realizarse de Enero a Marzo del 2024, me he planteado como ' +
