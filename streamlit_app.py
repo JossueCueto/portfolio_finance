@@ -33,6 +33,8 @@ if menu == 'Sobre mi':
     st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
     st.subheader('Desarrollo Personal y Profesional')
     st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
+    st.subheader('Experiencia adicional')
+    st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
     # Puedes agregar más secciones aquí relacionadas con 'Sobre mi'
 elif menu == 'Trabajos':
     st.title('Optimización de portafolio')
