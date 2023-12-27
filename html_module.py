@@ -5,21 +5,27 @@ def generate_html():
         .flex-container {
             display: flex;
             justify-content: space-around;
+            align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
         }
         @media (max-width: 720px) {
             .flex-container {
                 flex-direction: column;
             }
         }
+        .flex-item img {
+            max-width: 100%; /* Asegura que la imagen sea responsive */
+            height: auto;
+        }
     </style>
     <div class='flex-container'>
-        <div style='text-align: center;'>
-            <h1>Bienvenido a Mi Aplicación de Data Science</h1>
+        <div class='flex-item' style='text-align: center;'>
+            <img src='path_to_your_image.jpg' alt='Tu Imagen' /> <!-- Asegúrate de cambiar la ruta -->
         </div>
-        <div style='text-align: center;'>
-            <h2>Otro Encabezado</h2>
+        <div class='flex-item' style='text-align: center;'>
+            <p>Jossue Cueto<br> Bachiller en Ciencias Administrativas</p>
         </div>
     </div>
     """
     return outer_container
+
 
