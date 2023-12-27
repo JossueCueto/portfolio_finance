@@ -14,7 +14,6 @@ def run_perfil_profesional():
   # Your markdown content before the download button
   st.markdown("""
   - **Propuesta de Portafolio de inversión de renta fija**: Elaboración de un portafolio de inversión compuesto por 100% bonos corporativos en base a un análisis macroeconómico, sectorial y de ratios financieros de las empresas.
-  st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf')
   - **Medición de Riesgos de Portafolio de Inversión**: Análisis del riesgo de mercado y su impacto en el portafolio, considerando variables macroeconómicas y sensibilidad a factores de riesgo.
   - **Evaluación del Riesgo Crediticio**: Evaluación de la calidad crediticia para la compra de un bono corporativo de la empresa H2Olmos usando métricas de riesgo de crédito.
   - **Budget de Flujo de Caja y P&L**: Estimación de los resultados financieros de la compañía Netflix en los últimos 2 trimestres del 2023.
@@ -25,22 +24,22 @@ def run_perfil_profesional():
 
   with col1:
       # Contenido para la columna 1
-      st.markdown("**Reto Renta Fija**")
+      st.markdown("**Renta Fija**")
       st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_1')
   
   with col2:
       # Contenido para la columna 2
-      st.markdown("**Reto Riesgo de Mercado**")
+      st.markdown("**Riesgo de Mercado**")
       st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_2')
   
   with col3:
       # Contenido para la columna 3
-      st.markdown("**Reto Riesgo de Crédito**")
+      st.markdown("**Riesgo de Crédito**")
       st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_3')
   
   with col4:
       # Contenido para la columna 4
-      st.markdown("**Reto Fincorp**")
+      st.markdown("**Fincorp**")
       st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_4')
   
   st.header('Objetivos Profesionales para el 2024')
