@@ -16,7 +16,6 @@ def generate_html():
         .flex-item img {{
             max-width: 80px;
             height: auto;
-            border-radius: 100%;  /* Opcional: hace la imagen circular */
         }}
     </style>
     <div class='flex-container'>
