@@ -17,7 +17,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     port_std = np.zeros(npor)
     port_sharpe = np.zeros(npor)
     Annual_units = 252
-    risk_free_rate=rf()
+    risk_free_rate=float(rf())
     
     for portafolio in range(npor):
         w = np.array(np.random.random(n_asset))
