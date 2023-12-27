@@ -45,3 +45,4 @@ def display_sidebar_content():
         st.markdown('</div>', unsafe_allow_html=True)
         
         st.markdown('</div>', unsafe_allow_html=True)  # Cierra el contenedor principal
+
