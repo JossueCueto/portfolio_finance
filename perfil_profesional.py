@@ -1,8 +1,10 @@
 import streamlit as st
 
 def run_perfil_profesional():
+  
   st.header('Resumen Profesional')
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
+  
   st.header('Educación y Formación Académica')
   st.subheader('Ciencias Administrativas - UNJBG')
   st.write('Bachiller en Ciencias Administrativas con formación en ')
@@ -10,17 +12,40 @@ def run_perfil_profesional():
   st.subheader('Go to Market - NetValU')
   st.write('Seleccionado para un programa altamente competitivo de finanzas corporativas, inversiones, riesgos y empleabilidad, seleccionado entre más de 170 candidatos a nivel nacional para ser uno de los 20 participantes')
   # Your markdown content before the download button
-  st.markdown("""
+ st.markdown("""
   - **Propuesta de Portafolio de inversión de renta fija**: Elaboración de un portafolio de inversión compuesto por 100% bonos corporativos en base a un análisis macroeconómico, sectorial y de ratios financieros de las empresas.
-  """)
-  # The download button should be a standalone call to st.download_button()
-  st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='pdf_2')
-  # Continue with your markdown content after the download button
-  st.markdown("""
+  st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf')
   - **Medición de Riesgos de Portafolio de Inversión**: Análisis del riesgo de mercado y su impacto en el portafolio, considerando variables macroeconómicas y sensibilidad a factores de riesgo.
   - **Evaluación del Riesgo Crediticio**: Evaluación de la calidad crediticia para la compra de un bono corporativo de la empresa H2Olmos usando métricas de riesgo de crédito.
   - **Budget de Flujo de Caja y P&L**: Estimación de los resultados financieros de la compañía Netflix en los últimos 2 trimestres del 2023.
   """)
+
+# Crear 4 columnas del mismo tamaño
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    # Contenido para la columna 1
+    st.markdown("**Columna 1**")
+    st.write("Aquí va el contenido de la primera columna.")
+
+with col2:
+    # Contenido para la columna 2
+    st.markdown("**Columna 2**")
+    st.write("Aquí va el contenido de la segunda columna.")
+
+with col3:
+    # Contenido para la columna 3
+    st.markdown("**Columna 3**")
+    st.write("Aquí va el contenido de la tercera columna.")
+
+with col4:
+    # Contenido para la columna 4
+    st.markdown("**Columna 4**")
+    st.write("Aquí va el contenido de la cuarta columna.")
+  # The download button should be a standalone call to st.download_button()
+
+  st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='pdf_2')
+  
   st.header('Objetivos Profesionales para el 2024')
   st.subheader('CEFA - BCRP')
   st.write('Al haber sido seleccionado para participar en el Curso de Extensión de Finanzas Avanzadas ' + 
