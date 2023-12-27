@@ -20,8 +20,8 @@ def run_perfil_profesional():
   - **Budget de Flujo de Caja y P&L**: Estimación de los resultados financieros de la compañía Netflix en los últimos 2 trimestres del 2023.
   """)
 
-# Crear 4 columnas del mismo tamaño
-col1, col2, col3, col4 = st.columns(4)
+  # Crear 4 columnas del mismo tamaño
+  col1, col2, col3, col4 = st.columns(4)
 
   with col1:
       # Contenido para la columna 1
