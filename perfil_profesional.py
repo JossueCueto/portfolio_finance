@@ -25,26 +25,23 @@ def run_perfil_profesional():
 
   with col1:
       # Contenido para la columna 1
-      st.markdown("**Columna 1**")
-      st.write("Aquí va el contenido de la primera columna.")
+      st.markdown("**Reto Renta Fija**")
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_1')
   
   with col2:
       # Contenido para la columna 2
-      st.markdown("**Columna 2**")
-      st.write("Aquí va el contenido de la segunda columna.")
+      st.markdown("**Reto Riesgo de Mercado**")
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_2')
   
   with col3:
       # Contenido para la columna 3
-      st.markdown("**Columna 3**")
-      st.write("Aquí va el contenido de la tercera columna.")
+      st.markdown("**Reto Riesgo de Crédito**")
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_3')
   
   with col4:
       # Contenido para la columna 4
-      st.markdown("**Columna 4**")
-      st.write("Aquí va el contenido de la cuarta columna.")
-    # The download button should be a standalone call to st.download_button()
-
-  st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='pdf_2')
+      st.markdown("**Reto Fincorp**")
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_4')
   
   st.header('Objetivos Profesionales para el 2024')
   st.subheader('CEFA - BCRP')
