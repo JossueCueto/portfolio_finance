@@ -6,6 +6,9 @@ from perfil_profesional import run_perfil_profesional
 #Guardar contenido HTML
 html_content = generate_html()
 
+# Menú desplegable en la barra lateral
+menu = st.sidebar.selectbox('Menu', ['Sobre mi', 'Trabajos'])
+
 with st.sidebar:
     st.markdown(html_content, unsafe_allow_html=True)
     st.write(" ")
@@ -16,9 +19,6 @@ with st.sidebar:
     st.write("jossue.cueto@gmail.com")  # Asegúrate de reemplazar esto con tu información real
     st.write("www.linkedin.com/in/jossue-cueto/")  # Asegúrate de reemplazar esto con tu información real
     st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf')
-
-# Menú desplegable en la barra lateral
-menu = st.sidebar.selectbox('Menu', ['Sobre mi', 'Trabajos'])
 
 # Contenido principal de la aplicación que cambia basado en la selección del menú
 if menu == 'Sobre mi':
