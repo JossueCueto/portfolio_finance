@@ -78,21 +78,21 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
 
     # En la primera columna, mostrar información textual y DataFrame
     with col1:
-        st.write(f'La tasa libre de riesgo es {risk_free_rate}')
         
         # Mostrar el primer DataFrame
-        st.subheader("Detalle de la Cartera")
-        st.dataframe(df)
-        
-        # Mostrar el segundo DataFrame
         st.subheader("Volatilidad y Retorno de la Cartera")
         st.dataframe(port_df)
+        
+        # Mostrar el segundo DataFrame
+        st.subheader("Detalle de la Cartera")
+        st.dataframe(df)
         
     # En la segunda columna, mostrar el gráfico
     with col2:
         # Para mostrar un gráfico matplotlib en Streamlit
         st.pyplot(plt)
         # Nota: no es necesario llamar a plt.show() cuando se usa st.pyplot()
+        st.write(f'La tasa libre de riesgo es {risk_free_rate}')
 
 def run_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
