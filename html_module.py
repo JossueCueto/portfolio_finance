@@ -1,17 +1,12 @@
-import streamlit as st
-import base64
-
-def get_image_base64(path):
-    with open(path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode()
-
-def generate_html(image_base64):
+def generate_html():
+    # Asegúrate de reemplazar la URL de abajo con la URL de tu imagen en bruto de GitHub
+    image_url = 'https://raw.githubusercontent.com/JossueCueto/portfolio_finance/main/Foto.jpg'
     outer_container = f"""
     <style>
         .flex-container {{
             display: flex;
             justify-content: space-around;
-            align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+            align-items: center;
         }}
         @media (max-width: 720px) {{
             .flex-container {{
@@ -19,13 +14,14 @@ def generate_html(image_base64):
             }}
         }}
         .flex-item img {{
-            max-width: 100%; /* Asegura que la imagen sea responsive */
+            max-width: 100%;
             height: auto;
+            border-radius: 50%;  /* Opcional: hace la imagen circular */
         }}
     </style>
     <div class='flex-container'>
         <div class='flex-item' style='text-align: center;'>
-            <img src="data:image/jpeg;base64,{image_base64}" alt='Foto de Jossue Cueto' /> <!-- Imagen en base64 -->
+            <img src="{image_url}" alt='Foto de Jossue Cueto' />
         </div>
         <div class='flex-item' style='text-align: center;'>
             <p>Jossue Cueto<br>Bachiller en Ciencias Administrativas</p>
@@ -33,15 +29,3 @@ def generate_html(image_base64):
     </div>
     """
     return outer_container
-
-# Ruta a la imagen
-image_path = 'Foto.jpg'
-# Convertir la imagen a base64
-image_base64 = get_image_base64(image_path)
-# Generar el HTML con la imagen en base64
-html_content = generate_html(image_base64)
-
-# En tu aplicación Streamlit
-st.markdown(html_content, unsafe_allow_html=True)
-
-
