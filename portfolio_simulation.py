@@ -70,7 +70,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     
     # Creando el DataFrame
     df = pd.DataFrame({'Industria': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
-    #port_df = pd.DataFrame({'Volatilidad': valor1, 'Retorno': valor2})
+    port_df = pd.DataFrame({'Volatilidad': [valor1], 'Retorno':  [valor2]})
     
     #PARTE 6: EXHIBICIÓN DE RESULTADOS
     # Usar st.columns para crear dos columnas
@@ -89,7 +89,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
         
         # Mostrar el segundo DataFrame
         st.subheader("Resumen de Volatilidad y Retorno de la Cartera")
-        st.dataframe(df)
+        st.dataframe(port_df)
         
     # En la segunda columna, mostrar el gráfico
     with col2:
