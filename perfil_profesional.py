@@ -8,7 +8,7 @@ def run_perfil_profesional():
   st.header('Educación y Formación Académica')
   st.subheader('Ciencias Administrativas - UNJBG')
   st.write('Bachiller en Ciencias Administrativas, segundo lugar de mi promoción')
-  st.markdown(""" Cursos Relevantes: Contabilidad para la toma de desiciones, Formulación y evaluación de proyectos, Finanzas I,  Finanzas II,  Finanzas III """)
+  st.markdown(""" Cursos Relevantes: Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
   st.subheader('Go to Market - NetValU')
   st.write('Seleccionado para un programa altamente competitivo de finanzas corporativas, inversiones, riesgos y empleabilidad, seleccionado entre más de 170 candidatos a nivel nacional para ser uno de los 20 participantes')
   # Your markdown content before the download button
