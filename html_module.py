@@ -14,7 +14,7 @@ def generate_html():
             }}
         }}
         .flex-item img {{
-            max-width: 100%;
+            max-width: 80px;
             height: auto;
             border-radius: 50%;  /* Opcional: hace la imagen circular */
         }}
