@@ -63,9 +63,13 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     vector2 = ws[max_sharpe_location, :]
     vector3 = daily_returns.mean()*Annual_units
     vector4 = daily_returns.std()
+
+    valor1=max_sharpe_std
+    valor2=max_sharpe_rets
     
     # Creando el DataFrame
     df = pd.DataFrame({'Industria': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
+    port_df = pd.DataFrame({'Volatilidad': valor1, 'Retorno': valor2})
     
     #PARTE 6: EXHIBICIÓN DE RESULTADOS
     # Usar st.columns para crear dos columnas
@@ -73,11 +77,17 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
 
     # En la primera columna, mostrar información textual y DataFrame
     with col1:
-        st.write(f'El mayor ratio de Sharpe es {max_sharpe}')
-        st.write(f'La desviación estándar del portafolio con mayor ratio de sharpe es {max_sharpe_std}')
-        st.write(f'El retorno del portafolio con mayor ratio de sharpe es {max_sharpe_rets}')
-        st.dataframe(df)  # Mostrar el DataFrame
-        # En la segunda columna, mostrar el gráfico
+        st.write(f'La tasa libre de riesgo es {risk_free_rate}')
+        
+        # Mostrar el primer DataFrame
+        st.subheader("Detalle de la Cartera")
+        st.dataframe(df)
+        
+        # Mostrar el segundo DataFrame
+        st.subheader("Resumen de Volatilidad y Retorno de la Cartera")
+        st.dataframe(df_port)
+        
+    # En la segunda columna, mostrar el gráfico
     with col2:
         # Para mostrar un gráfico matplotlib en Streamlit
         st.pyplot(plt)
