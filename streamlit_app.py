@@ -1,12 +1,18 @@
 import streamlit as st
 from portfolio_simulation import run_simulation
+from html_module import generate_html
+
 
 # Encabezado de la aplicación
 st.title('Mi Aplicación de Data Science')
 
+#Guardar contenido HTML
+html_content = generate_html()
+
 import streamlit as st
 
 with st.sidebar:
+    st.markdown(html_content, unsafe_allow_html=True)
     st.image('foto.jpg', width=80)  # Ajusta el tamaño de la imagen como sea necesario
     # Puedes usar st.markdown para un control más fino del formato de texto, si es necesario
     st.markdown('**Jossue Cueto**')
