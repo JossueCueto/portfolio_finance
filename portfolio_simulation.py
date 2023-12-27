@@ -79,6 +79,9 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     # En la primera columna, mostrar información textual y DataFrame
     with col1:
         st.write(f'La tasa libre de riesgo es {risk_free_rate}')
+        st.write("Tipo y valor de valor1:", type(valor1), valor1)
+        st.write("Tipo y valor de valor2:", type(valor2), valor2)
+
         
         # Mostrar el primer DataFrame
         st.subheader("Detalle de la Cartera")
