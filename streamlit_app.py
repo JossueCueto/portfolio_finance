@@ -18,7 +18,10 @@ with st.sidebar:
     with col2:
         # Añade un espaciador horizontal antes del texto para incrementar el espacio
         st.write(" ")  # Incrementa el número de espacios si es necesario
-
+        st.write(" ")  # Incrementa el número de espacios si es necesario
+        st.write(" ")  # Incrementa el número de espacios si es necesario
+        st.write(" ")  # Incrementa el número de espacios si es necesario
+        
         # Añade el texto
         st.write('Jossue Cueto')
         st.write('Bachiller en Ciencias Administrativas, interesado en el mercado de capitales')
