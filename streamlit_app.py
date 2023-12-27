@@ -17,7 +17,7 @@ with st.sidebar:
         st.markdown("""
         <style>
         .spacer {
-            margin-left: 10px;  /* Ajusta este valor según sea necesario */
+            margin-left: 20px;  /* Ajusta este valor según sea necesario */
         }
         </style>
         <div class="spacer">
