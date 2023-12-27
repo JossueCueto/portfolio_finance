@@ -4,7 +4,9 @@ def run_perfil_profesional():
   st.subheader('Resumen Profesional')
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
   st.header('Educación y Formación Académica')
-  st.subheader('NetValU')
+  st.subheader('Universidad Nacional Jorge Basadre Grohmann')
+  st.subheader('Go to Market - NetValU')
+  st.write('Seleccionado para un programa altamente competitivo de finanzas corporativas, inversiones, riesgos y empleabilidad, seleccionado entre más de 170 candidatos a nivel nacional para ser uno de los 20 participantes')
   st.markdown("""
   - **Propuesta de Portafolio de inversión de renta fija**: Elaboración de un portafolio de inversión compuesto por 100% bonos corporativos en base a un análisis macroeconómico, sectorial y de ratios financieros de las empresas.
   - **Medición de Riesgos de Portafolio de Inversión**: Análisis del riesgo de mercado y su impacto en el portafolio, considerando variables macroeconómicas y sensibilidad a factores de riesgo.
