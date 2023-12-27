@@ -1,5 +1,5 @@
 def generate_html():
-    # Asegúrate de reemplazar la URL de abajo con la URL de tu imagen en bruto de GitHub
+    #URL de la foto
     image_url = 'https://raw.githubusercontent.com/JossueCueto/portfolio_finance/main/Foto.jpg'
     outer_container = f"""
     <style>
@@ -16,6 +16,7 @@ def generate_html():
         .flex-item img {{
             max-width: 80px;
             height: auto;
+            border-radius: 50%; 
         }}
     </style>
     <div class='flex-container'>
