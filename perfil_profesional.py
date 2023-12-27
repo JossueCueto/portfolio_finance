@@ -10,7 +10,7 @@ def run_perfil_profesional():
   st.write('Bachiller en Ciencias Administrativas, segundo lugar de mi promoción.')
   st.markdown(""" **Cursos relevantes:** Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
   # Crear 4 columnas del mismo tamaño
-  col1, col2= st.columns(2)
+  col1, col2,col3= st.columns(1,1,2)
   with col1:
       # Contenido para la columna 1
       st.markdown("<div style='text-align: center;'><strong>Certificado Bachiller</strong></div>", unsafe_allow_html=True)
@@ -23,6 +23,8 @@ def run_perfil_profesional():
       st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
       st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf', key='orden')
       st.markdown("</div>", unsafe_allow_html=True)
+    
+  with col3:
 
   st.subheader('Ofimática - ITEL')
   st.write('Técnico en Ofimática  ')
