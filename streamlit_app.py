@@ -25,13 +25,13 @@ if menu == 'Sobre mi':
     # Encabezado de la aplicación
     st.title('Perfil Profesional')
     # Contenido de 'Sobre mi'
-    st.header('Resumen Profesional')
+    st.subheader('Resumen Profesional')
     st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
-    st.header('Educación y Formación Académica')
+    st.subheader('Educación y Formación Académica')
     st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
-    st.header('Objetivos Profesionales')
+    st.subheader('Objetivos Profesionales')
     st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
-    st.header('Desarrollo Personal y Profesional')
+    st.subheader('Desarrollo Personal y Profesional')
     st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
     # Puedes agregar más secciones aquí relacionadas con 'Sobre mi'
 elif menu == 'Trabajos':
