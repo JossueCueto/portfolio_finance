@@ -13,7 +13,7 @@ with st.sidebar:
     st.markdown(html_content, unsafe_allow_html=True)
     st.write(" ")
     # Puedes usar st.markdown para un control más fino del formato de texto, si es necesario
-    if not menu!='Sobre mi':
+    if not menu=='Sobre mi':
         st.markdown('Bachiller en Ciencias Administrativas con dominio intermedio de inglés, habilidades analíticas y comunicativas, enfocado en el mercado de capitales y gestión de portafolios.')
     st.write("Wish to connect?")
     st.write("jossue.cueto@gmail.com")  # Asegúrate de reemplazar esto con tu información real
