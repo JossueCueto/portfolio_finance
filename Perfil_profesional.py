@@ -1,6 +1,6 @@
 import streamlit as st
 
-def run_perfil_profesional:
+def run_perfil_profesional():
   st.subheader('Resumen Profesional')
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
   st.header('Educación y Formación Académica')
