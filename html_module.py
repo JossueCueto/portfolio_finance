@@ -19,7 +19,7 @@ def generate_html():
     </style>
     <div class='flex-container'>
         <div class='flex-item' style='text-align: center;'>
-            <img src='foto.jpg' alt='Tu Imagen' /> <!-- Asegúrate de cambiar la ruta -->
+            <img src='foto.jpg'/>
         </div>
         <div class='flex-item' style='text-align: center;'>
             <p>Jossue Cueto<br> Bachiller en Ciencias Administrativas</p>
