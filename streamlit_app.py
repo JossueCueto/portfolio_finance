@@ -1,7 +1,7 @@
 import streamlit as st
 from portfolio_simulation import run_simulation
 from html_module import generate_html
-from Perfil_profsional import run_perfil_profesional
+from perfil_profesional import run_perfil_profesional
 
 #Guardar contenido HTML
 html_content = generate_html()
