@@ -5,16 +5,17 @@ from portfolio_simulation import run_simulation
 st.title('Mi Aplicación de Data Science')
 
 with st.sidebar:
-    # Define las columnas con un gap para añadir espacio entre ellas
-    col1, col2 = st.columns([1, 4], gap="large")
+    col1, col2 = st.columns([1, 4])
 
     with col1:
         st.image('foto.jpg', width=80)  # Ajusta el tamaño de la imagen como sea necesario
     
+    # Uso de un espacio en blanco para separar la imagen del texto
+    st.write('&nbsp;', unsafe_allow_html=True)
+    
     with col2:
         st.write('Jossue Cueto')
         st.write('Bachiller en Ciencias Administrativas, interesado en el mercado de capitales')
-
 
 # Agrega más información debajo de las columnas anidadas en la barra lateral si es necesario
 st.sidebar.write("Wish to connect?")
