@@ -16,11 +16,17 @@ def run_perfil_profesional():
   - **Budget de Flujo de Caja y P&L**: Estimación de los resultados financieros de la compañía Netflix en los últimos 2 trimestres del 2023.
   """)
   st.subheader('Objetivos Profesionales 2024')
-  st.subheader('CEFA - BCRP')
-  st.write('Al haber sido seleccionado para participar en el Curso de Extensión de Finanzas Avanzadas (CEFA) organizado por el BCRP a realizarse de Enero a Marzo del 2024, me plantee como objetivo acabar entre los primeros puestos a fin de demostrar mi capacidad y conocimiento en el área financiera')
+  st.write('Al haber sido seleccionado para participar en el Curso de Extensión de Finanzas Avanzadas ' + 
+            '(CEFA) organizado por el BCRP a realizarse de Enero a Marzo del 2024, me he planteado como ' +
+             'objetivo finalizar entre los primeros puestos. Esta meta refleja mi determinación de demostrar ' +
+             'y profundizar mi capacidad y conocimiento en el área financiera, así como mi compromiso con el ' +
+             'logro de la excelencia en un entorno competitivo.')
+
   st.subheader('CFA')
-  st.write('Para el año 2024 tengo planteado aprobar el primer nivel del CFA con el fin de acreditar y consolidar mi conocimiento')
-  st.subheader('Desarrollo Personal y Profesional')
+  st.write('Además, para el año 2024, me he propuesto aprobar el primer nivel del Chartered Financial ' +
+             'Analyst (CFA). Este objetivo es crucial para acreditar y consolidar mi conocimiento en finanzas, ' +
+             'representando un paso significativo hacia el reconocimiento profesional y la expansión de mis ' +
+             'competencias en el sector financiero global.')
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
   st.subheader('Experiencia adicional')
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
