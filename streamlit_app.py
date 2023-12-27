@@ -6,14 +6,13 @@ from perfil_profesional import run_perfil_profesional
 # Guardar contenido HTML
 html_content = generate_html()
 
-# Menú desplegable en la barra lateral
-menu = st.sidebar.selectbox(['Sobre mi', 'Trabajos'])
+# Definir la variable 'menu' antes de usarla
+menu = st.sidebar.selectbox('', ['Sobre mi', 'Trabajos'])
 
 with st.sidebar:
     st.markdown(html_content, unsafe_allow_html=True)
     st.write(" ")
     if menu != 'Sobre mi':
-    with st.sidebar:
         st.markdown('Bachiller en Ciencias Administrativas con dominio intermedio de inglés, habilidades analíticas y comunicativas, enfocado en el mercado de capitales y gestión de portafolios.')
     st.write("Wish to connect?")
     st.write("jossue.cueto@gmail.com")  # Asegúrate de reemplazar esto con tu información real
@@ -27,5 +26,3 @@ if menu == 'Sobre mi':
 elif menu == 'Trabajos':
     st.title('Optimización de portafolio')
     run_simulation()
-
-
