@@ -11,7 +11,7 @@ with st.sidebar:
         st.image('foto.jpg', width=80)  # Ajusta el tamaño de la imagen como sea necesario
     
     # Uso de un espacio en blanco para separar la imagen del texto
-    st.write('&nbsp;', unsafe_allow_html=True)
+    st.write('&nbsp;' * 10, unsafe_allow_html=True)
     
     with col2:
         st.write('Jossue Cueto')
