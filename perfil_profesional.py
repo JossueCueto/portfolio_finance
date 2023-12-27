@@ -24,12 +24,12 @@ def run_perfil_profesional():
 
   with col1:
       # Contenido para la columna 1
-      st.markdown("<strong style='text-align: center;'>Riesgo de Crédito</strong>", unsafe_allow_html=True)
+      st.markdown("<div style='text-align: center;'><strong>Riesgo de Crédito</strong></div>", unsafe_allow_html=True)
       st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_1')
   
   with col2:
       # Contenido para la columna 2
-      st.markdown("<b style='text-align: center;'>Riesgo de Crédito</b>", unsafe_allow_html=True)
+      st.markdown("<b style='text-align: center;'>Renta Fija</b>", unsafe_allow_html=True)
       st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_2')
   
   with col3:
