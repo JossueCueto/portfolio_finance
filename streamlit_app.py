@@ -13,7 +13,7 @@ import streamlit as st
 
 with st.sidebar:
     st.markdown(html_content, unsafe_allow_html=True)
-    st.image('foto.jpg', width=80)  # Ajusta el tamaño de la imagen como sea necesario
+    #st.image('foto.jpg', width=80)  # Ajusta el tamaño de la imagen como sea necesario
     # Puedes usar st.markdown para un control más fino del formato de texto, si es necesario
     st.markdown('**Jossue Cueto**')
     st.markdown('Bachiller en Ciencias Administrativas, interesado en el mercado de capitales')
