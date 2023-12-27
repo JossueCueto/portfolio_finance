@@ -1,12 +1,6 @@
-import base64
-
-def get_image_base64(path):
-    with open(path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode('utf-8')
-
 def generate_html():
-    image_base64 = get_image_base64('Foto.jpg')
-    # Contenedor externo con display flex y una consulta de medios para responsividad
+    # Asegúrate de reemplazar la URL de abajo con la URL de tu imagen en bruto de GitHub
+    image_url = 'https://github.com/your_username/your_repository/raw/main/Foto.jpg'
     outer_container = f"""
     <style>
         .flex-container {{
@@ -27,7 +21,7 @@ def generate_html():
     </style>
     <div class='flex-container'>
         <div class='flex-item' style='text-align: center;'>
-            <img src="data:image/jpeg;base64,{image_base64}" alt='Foto de Jossue Cueto' />
+            <img src="{image_url}" alt='Foto de Jossue Cueto' />
         </div>
         <div class='flex-item' style='text-align: center;'>
             <p>Jossue Cueto<br>Bachiller en Ciencias Administrativas</p>
@@ -35,6 +29,7 @@ def generate_html():
     </div>
     """
     return outer_container
+
 
 # En el script principal de Streamlit
 html_content = generate_html()
