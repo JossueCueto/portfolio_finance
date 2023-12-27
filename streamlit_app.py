@@ -4,14 +4,21 @@ from portfolio_simulation import run_simulation
 # Encabezado de la aplicación
 st.title('Mi Aplicación de Data Science')
 
+import streamlit as st
+
 # Utilizando st.columns dentro de la barra lateral para crear un diseño de columna anidada
 with st.sidebar:
+    # Usamos un espaciador antes de las columnas para añadir algo de espacio si es necesario
+    st.write(" ")  # Añade espacios en blanco para más espacio si es necesario
     col1, col2 = st.columns([1, 3])
     with col1:
         st.image('foto.jpg', width=80)  # Ajusta el tamaño de la imagen como sea necesario
     with col2:
-        st.write('Jossue Cueto')
-        st.write('Bachiller en Ciencias Administrativas, interesado en el mercado de capitales')  # Puedes cambiar esto por los emojis o íconos si quieres
+        # Puedes usar st.markdown para un control más fino del formato de texto, si es necesario
+        st.markdown('**Jossue Cueto**')
+        st.markdown('Bachiller en Ciencias Administrativas, interesado en el mercado de capitales')
+        # Añade espacios en blanco después del texto si es necesario
+        st.write(" ")
 
 # Agrega más información debajo de las columnas anidadas en la barra lateral si es necesario
 st.sidebar.write("Wish to connect?")
