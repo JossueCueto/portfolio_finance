@@ -1,7 +1,7 @@
 import streamlit as st
 
 def run_perfil_profesional():
-  st.subheader('Resumen Profesional')
+  st.header('Resumen Profesional')
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
   st.header('Educación y Formación Académica')
   st.subheader('Ciencias Administrativas - UNJBG')
@@ -28,5 +28,5 @@ def run_perfil_profesional():
              'Analyst (CFA). Este objetivo es crucial para acreditar y consolidar mi conocimiento en finanzas, ' +
              'representando un paso significativo hacia el reconocimiento profesional y la expansión de mis ' +
              'competencias en el sector financiero global.')
-  st.subheader('Experiencia adicional')
+  st.header('Experiencia adicional')
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
