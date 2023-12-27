@@ -1,9 +1,9 @@
 import datetime as dt
 import pandas_datareader.data as pdr
 
-def risk_free_function(max_intentos):
+def risk_free_function(max_intentos=7):
     iteracion = 0
-    max_intentos = 7  # Número máximo de días en el pasado que queremos buscar
+    #max_intentos=Número máximo de días en el pasado que queremos buscar
     last_valid_risk_free_rate = None
     
     while last_valid_risk_free_rate is None and iteracion < max_intentos:
@@ -26,3 +26,4 @@ def risk_free_function(max_intentos):
         last_valid_risk_free_rate=last_valid_risk_free_rate
     else:
         last_valid_risk_free_rate="No se pudo encontrar un valor válido en los últimos intentos."
+    return last_valid_risk_free_rate/100
