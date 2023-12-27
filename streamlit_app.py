@@ -14,7 +14,6 @@ import streamlit as st
 with st.sidebar:
     st.markdown(html_content, unsafe_allow_html=True)
     # Puedes usar st.markdown para un control más fino del formato de texto, si es necesario
-    st.markdown('**Jossue Cueto**')
     st.markdown('Bachiller en Ciencias Administrativas, interesado en el mercado de capitales')
     # Añade espacios en blanco después del texto si es necesario
     st.write(" ")
