@@ -15,7 +15,7 @@ with st.sidebar:
     st.markdown(html_content, unsafe_allow_html=True)
     st.write(" ")
     # Puedes usar st.markdown para un control más fino del formato de texto, si es necesario
-    st.markdown('Bachiller en Ciencias Administrativas. Dominio del idioma inglés a nivel intermedio. Habilidades comunicativas y de trabajo en equipo, capacidad analítica y búsqueda constante de aprendizaje. Conocimiento e interés en mercado de capitales y gestión de portafolios.')
+    st.markdown('"Bachiller en Ciencias Administrativas con dominio intermedio de inglés, habilidades analíticas y comunicativas, con conocimiento e interés en mercado de capitales y gestión de portafolios.')
 # Agrega más información debajo de las columnas anidadas en la barra lateral si es necesario
 st.sidebar.write("Wish to connect?")
 st.sidebar.write("jossue.cueto@gmail.com")  # Asegúrate de reemplazar esto con tu información real
