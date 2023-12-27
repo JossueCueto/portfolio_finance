@@ -14,7 +14,7 @@ def run_perfil_profesional():
   - **Propuesta de Portafolio de inversión de renta fija**: Elaboración de un portafolio de inversión compuesto por 100% bonos corporativos en base a un análisis macroeconómico, sectorial y de ratios financieros de las empresas.
   """)
   # The download button should be a standalone call to st.download_button()
-  st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf')
+  st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='pdf_2')
   # Continue with your markdown content after the download button
   st.markdown("""
   - **Medición de Riesgos de Portafolio de Inversión**: Análisis del riesgo de mercado y su impacto en el portafolio, considerando variables macroeconómicas y sensibilidad a factores de riesgo.
