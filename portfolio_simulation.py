@@ -10,7 +10,7 @@ from risk_free import risk_free_function as rf
 # PARTE 2: SIMULACIÓN DE PESOS DE PORTAFOLIO
 def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     np.random.seed(10)
-    npor = int(1e4)
+    npor = int(1e5)
     n_asset = number_assets
     ws = np.zeros((npor, n_asset))
     port_rets = np.zeros(npor)
@@ -70,7 +70,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     
     # Creando el DataFrame
     df = pd.DataFrame({'Industria': vector1, 'Peso': vector2,'Rentabilidad Anual': vector3, 'Volatilidad Anual': vector4})
-    port_df = pd.DataFrame({'Volatilidad': [valor1], 'Retorno':  [valor2]})
+    port_df = pd.DataFrame({'Volatilidad': [valor1], 'Retorno':  [valor2]},index=['Portafolio'])
     
     #PARTE 6: EXHIBICIÓN DE RESULTADOS
     # Usar st.columns para crear dos columnas
@@ -85,7 +85,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
         st.dataframe(df)
         
         # Mostrar el segundo DataFrame
-        st.subheader("Resumen de Volatilidad y Retorno de la Cartera")
+        st.subheader("Volatilidad y Retorno de la Cartera")
         st.dataframe(port_df)
         
     # En la segunda columna, mostrar el gráfico
