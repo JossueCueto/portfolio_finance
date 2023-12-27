@@ -27,6 +27,5 @@ def run_perfil_profesional():
              'Analyst (CFA). Este objetivo es crucial para acreditar y consolidar mi conocimiento en finanzas, ' +
              'representando un paso significativo hacia el reconocimiento profesional y la expansión de mis ' +
              'competencias en el sector financiero global.')
-  st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
   st.subheader('Experiencia adicional')
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
