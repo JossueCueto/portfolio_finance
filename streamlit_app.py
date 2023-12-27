@@ -23,10 +23,15 @@ menu = st.sidebar.selectbox('Menu', ['Sobre mi', 'Trabajos'])
 # Contenido principal de la aplicación que cambia basado en la selección del menú
 if menu == 'Sobre mi':
     # Encabezado de la aplicación
-    st.title('Mi Aplicación de Data Science')
+    st.title('Perfil Profesional')
     # Contenido de 'Sobre mi'
-    st.header('Snapshot de la Carrera')
-    st.subheader('Mi Introducción a Data Science')
+    st.header('Resumen Profesional')
+    st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
+    st.header('Educación y Formación Académica')
+    st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
+    st.header('Objetivos Profesionales')
+    st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
+    st.header('Desarrollo Personal y Profesional')
     st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
     # Puedes agregar más secciones aquí relacionadas con 'Sobre mi'
 elif menu == 'Trabajos':
