@@ -17,14 +17,15 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     port_std = np.zeros(npor)
     port_sharpe = np.zeros(npor)
     Annual_units = 252
-
+    risk_free_rate=int(rf())
+    
     for portafolio in range(npor):
         w = np.array(np.random.random(n_asset))
         w = w/np.sum(w)
         ws[portafolio, :] = w
         port_rets[portafolio] = np.sum(daily_returns.mean() * w * Annual_units)
         port_std[portafolio] = np.sqrt(np.dot(w.T, np.dot(daily_returns.cov() * Annual_units, w)))
-        port_sharpe[portafolio] = port_rets[portafolio] / port_std[portafolio]
+        port_sharpe[portafolio] = (port_rets[portafolio]-risk_free_rate) / port_std[portafolio]
 
     plt.scatter(port_std, port_rets, c=port_sharpe, cmap='viridis', s=10)
     
