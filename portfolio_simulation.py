@@ -10,7 +10,7 @@ from risk_free import risk_free_function as rf
 # PARTE 2: SIMULACIÓN DE PESOS DE PORTAFOLIO
 def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     np.random.seed(10)
-    npor = int(1e5)
+    npor = int(3e4)
     n_asset = number_assets
     ws = np.zeros((npor, n_asset))
     port_rets = np.zeros(npor)
