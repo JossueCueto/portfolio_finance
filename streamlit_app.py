@@ -7,7 +7,7 @@ from perfil_profesional import run_perfil_profesional
 html_content = generate_html()
 
 # Definir la variable 'menu' antes de usarla
-menu = st.sidebar.selectbox(,['Sobre mi', 'Trabajos'])
+menu = st.sidebar.selectbox('',['Sobre mi', 'Trabajos'])
 st.write(" ")
 
 with st.sidebar:
