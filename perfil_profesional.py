@@ -6,12 +6,12 @@ def run_perfil_profesional():
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
   
   st.header('Educación y Formación Académica')
-  st.subheader('Ciencias Administrativas - UNJBG 2022-2023')
+  st.subheader('Ciencias Administrativas - UNJBG (2018-2022)')
   st.write('Bachiller en Ciencias Administrativas, segundo lugar de mi promoción.')
-  st.markdown(""" **Cursos Relevantes:** Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
+  st.markdown(""" **Cursos relevantes:** Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
   st.subheader('Ofimática - ITEL')
-  st.write('Técnico en Ofimática')
-  st.markdown(""" **Cursos Relevantes:** Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
+  st.write('Técnico en Ofimática  ')
+  st.markdown(""" **Cursos Relevantes:** Base de datos I y II, Hoja electrónica I y II (Excel y VBA)""")
   st.subheader('Go to Market - NetValU')
   st.write('Seleccionado para un programa altamente competitivo de finanzas corporativas, inversiones, riesgos y empleabilidad, seleccionado entre más de 170 candidatos a nivel nacional para ser uno de los 20 participantes')
   # Your markdown content before the download button
