@@ -24,7 +24,7 @@ def generate_html():
             <img src="{image_url}" alt='Foto de Jossue Cueto' />
         </div>
         <div class='flex-item' style='text-align: center;'>
-            <p><strong>Jossue Enrique<br>Cuento Ninaja</strong></p>
+            <p><strong>Jossue Enrique<br>Cueto Ninaja</strong><br>CEFA|NetValU|UNJBG</p>
         </div>
     </div>
     """
