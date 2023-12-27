@@ -6,12 +6,13 @@ st.title('Mi Aplicación de Data Science')
 
 import streamlit as st
 
-st.image('foto.jpg', width=100)  # Ajusta el tamaño de la imagen como sea necesario
-# Puedes usar st.markdown para un control más fino del formato de texto, si es necesario
-st.markdown('**Jossue Cueto**')
-st.markdown('Bachiller en Ciencias Administrativas, interesado en el mercado de capitales')
-# Añade espacios en blanco después del texto si es necesario
-st.write(" ")
+with st.sidebar:
+    st.image('foto.jpg', width=80)  # Ajusta el tamaño de la imagen como sea necesario
+    # Puedes usar st.markdown para un control más fino del formato de texto, si es necesario
+    st.markdown('**Jossue Cueto**')
+    st.markdown('Bachiller en Ciencias Administrativas, interesado en el mercado de capitales')
+    # Añade espacios en blanco después del texto si es necesario
+    st.write(" ")
 
 # Agrega más información debajo de las columnas anidadas en la barra lateral si es necesario
 st.sidebar.write("Wish to connect?")
