@@ -5,17 +5,26 @@ from portfolio_simulation import run_simulation
 st.title('Mi Aplicación de Data Science')
 
 with st.sidebar:
+    # Utilizamos las proporciones deseadas para las columnas
     col1, col2 = st.columns([1, 4])
 
     with col1:
-        st.image('foto.jpg', width=80)  # Ajusta el tamaño de la imagen como sea necesario
-    
-    # Uso de un espacio en blanco para separar la imagen del texto
-    st.write('&nbsp;' * 10, unsafe_allow_html=True)
+        # Añadimos la imagen con el tamaño que queramos
+        st.image('foto.jpg', width=80)
     
     with col2:
-        st.write('Jossue Cueto')
-        st.write('Bachiller en Ciencias Administrativas, interesado en el mercado de capitales')
+        # Añadimos un estilo en línea al texto para agregar un margen a la izquierda
+        st.markdown("""
+        <style>
+        .spacer {
+            margin-left: 10px;  /* Ajusta este valor según sea necesario */
+        }
+        </style>
+        <div class="spacer">
+        <p>Jossue Cueto</p>
+        <p>Bachiller en Ciencias Administrativas, interesado en el mercado de capitales</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 # Agrega más información debajo de las columnas anidadas en la barra lateral si es necesario
 st.sidebar.write("Wish to connect?")
