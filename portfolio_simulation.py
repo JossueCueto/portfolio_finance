@@ -98,12 +98,13 @@ def run_portfolio_simulation():
     risk_free_rate_percent=round(risk_free_rate * 100, 2)  # Redondeo a decimales
     
     st.write('Maximice el rendimiento ajustado al riesgo de sus inversiones. Esta aplicación ofrece simulaciones Monte Carlo y análisis de cartera para ayudarle a encontrar la combinación ideal de activos. Con acceso a datos financieros de Yahoo Finance en tiempo real y visualizaciones claras de rendimiento y riesgo, permitiendo simplificar la toma de decisiones estratégicas en inversiones.')
-    st.write("**Consideraciones**")
+    st.write("**Consideraciones Importantes**")
     st.markdown(f"""
-    - La simulación de Montecarlo consta de 30,000 simulaciones.
-    - La tasa libre de riesgo es el bono de tesoro de 10 años, cuyo valor actual es de {risk_free_rate_percent}% con ticker ^TNX.
-    - Los tickers se limitan a los registrados en Yahoo Finance.
-    - La cantidad máxima de analisis de tickers es de 20.
+    - Se realizan 30,000 simulaciones en el modelo de Monte Carlo.
+    - La tasa libre de riesgo corresponde al bono del Tesoro de EE.UU. a 10 años (Ticker: ^TNX), actualmente en {risk_free_rate_percent}%.
+    - Solo se pueden analizar tickers disponibles en Yahoo Finance.
+    - Se permite un máximo de 20 tickers por análisis.
+    - La optimización se basa en el ratio de Sharpe, enfocándose en la eficiencia del rendimiento ajustado por el riesgo.
     """)
     # Almacena el número de activos y las fechas en session_state para persistencia (valores por defecto)
     if 'number_assets' not in st.session_state:
