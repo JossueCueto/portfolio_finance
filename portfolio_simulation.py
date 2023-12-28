@@ -43,7 +43,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
     max_rets=port_rets.max()
 
     plt.scatter(max_sharpe_std, max_sharpe_rets, c='red', s=50)
-    plt.title('Portfolio Optimization with the Sharpe Ratio')
+    plt.title('Optimización del portafolio con ratio de Sharpe')
     
     # Agregar líneas de utilidad
     valores_utilidad=np.linspace(0, 100,75)
@@ -87,10 +87,9 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
         
     # En la segunda columna, mostrar el gráfico
     with col2:
-        # Para mostrar un gráfico matplotlib en Streamlit
+        # Mostrar un gráfico matplotlib en Streamlit
         st.pyplot(plt)
         # Nota: no es necesario llamar a plt.show() cuando se usa st.pyplot()
-        st.write(f'La tasa libre de riesgo es {risk_free_rate}')
 
 def run_portfolio_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
