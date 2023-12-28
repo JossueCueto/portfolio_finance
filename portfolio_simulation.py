@@ -8,7 +8,7 @@ import datetime as dt
 from risk_free import risk_free_function as rf
 
 # PARTE 2: SIMULACIÓN DE PESOS DE PORTAFOLIO
-def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_free_rate):
+def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     np.random.seed(10)
     npor = int(3e4)
     n_asset = number_assets
@@ -17,6 +17,8 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
     port_std = np.zeros(npor)
     port_sharpe = np.zeros(npor)
     Annual_units = 252
+    risk_free_rate=float(rf())
+    #risk_free_rate=0.03
     
     for portafolio in range(npor):
         w = np.array(np.random.random(n_asset))
@@ -43,7 +45,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
     max_rets=port_rets.max()
 
     plt.scatter(max_sharpe_std, max_sharpe_rets, c='red', s=50)
-    plt.title('Optimización del portafolio con ratio de Sharpe')
+    plt.title('Portfolio Optimization with the Sharpe Ratio')
     
     # Agregar líneas de utilidad
     valores_utilidad=np.linspace(0, 100,75)
@@ -87,24 +89,17 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
         
     # En la segunda columna, mostrar el gráfico
     with col2:
-        # Mostrar un gráfico matplotlib en Streamlit
+        # Para mostrar un gráfico matplotlib en Streamlit
         st.pyplot(plt)
         # Nota: no es necesario llamar a plt.show() cuando se usa st.pyplot()
+        st.write(f'La tasa libre de riesgo es {risk_free_rate}')
 
 def run_portfolio_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
     yf.pdr_override()
-    risk_free_rate=float(rf())
-    risk_free_rate_percent=round(risk_free_rate * 100, 2)  # Redondeo a decimales
-    
-    st.write('Maximice el rendimiento ajustado al riesgo de sus inversiones. Esta aplicación ofrece simulaciones Monte Carlo y análisis de cartera para ayudarle a encontrar la combinación ideal de activos. Con acceso a datos financieros de Yahoo Finance en tiempo real y visualizaciones claras de rendimiento y riesgo, permitiendo simplificar la toma de decisiones estratégicas en inversiones.')
-    st.write("**Consideraciones**")
-    st.markdown(f"""
-    - La simulación de Montecarlo consta de 30,000 simulaciones.
-    - La tasa libre de riesgo es el bono de tesoro de 10 años, cuyo valor actual es de {risk_free_rate_percent}% con ticker ^TNX.
-    - Los tickers se limitan a los registrados en Yahoo Finance.
-    - La cantidad máxima de analisis de tickers es de 20.
-    """)
+
+    st.title('Simulador de Portafolio de Inversiones')
+
     # Almacena el número de activos y las fechas en session_state para persistencia (valores por defecto)
     if 'number_assets' not in st.session_state:
         st.session_state['number_assets'] = 2
@@ -112,19 +107,14 @@ def run_portfolio_simulation():
         st.session_state['start'] = dt.date.today() - dt.timedelta(days=365)
     if 'end' not in st.session_state:
         st.session_state['end'] = dt.date.today()
-        
-    col1, col2,col3= st.columns(3)
-    with col1:
-        # Almacena el número de activos y las fechas que se escriban
-        number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, max_value=20,value=st.session_state['number_assets'], step=1)
-        st.write('')
-        st.session_state['number_assets'] = number_assets
-    with col2:
-        start = st.text_input('Fecha de inicio (YYYY-MM-DD):', st.session_state['start'])
-        st.session_state['start'] = start
-    with col3:
-        end = st.text_input('Fecha de cierre (YYYY-MM-DD):', st.session_state['end'])
-        st.session_state['end'] = end
+
+    # Almacena el número de activos y las fechas que se escriban
+    number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=st.session_state['number_assets'], step=1)
+    st.session_state['number_assets'] = number_assets
+    start = st.text_input('Ingrese la fecha de inicio (YYYY-MM-DD):', st.session_state['start'])
+    st.session_state['start'] = start
+    end = st.text_input('Ingrese la fecha de cierre (YYYY-MM-DD):', st.session_state['end'])
+    st.session_state['end'] = end
 
     # Inicializa los tickers en session_state
     # st.session_state es una herramienta para mantener información entre diferentes ejecuciones del script.
@@ -158,6 +148,6 @@ def run_portfolio_simulation():
             daily_returns.dropna(axis=0)
 
             if not daily_returns.empty:
-                perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_free_rate)
+                perform_simulation(daily_returns, number_assets,tickers,industry_data)
             else:
-                st.error('No se pudieron obtener datos. Porfavor verifique que la fecha o los tickers esten correctamente introducidos')
+                st.error('No se pudieron obtener datos para los tickers proporcionados.')
