@@ -14,11 +14,11 @@ def run_perfil_profesional():
   with col1:
       # Contenido columna 1
       st.markdown("<div style='text-align: center;'><strong>Certificado Bachiller</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'PDF/CV_Jossue.pdf', 'CV_Jossue.pdf',key='bachiller')
+      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/blob/ea8c41b65549d641815ff14cdf5bd949aca7402e/PDF/Constancia_Orden_Merito_Jossue.pdf', 'Constancia_Orden_Merito_Jossue.pdf',key='bachiller')
   with col2:
       # Contenido columna 2
       st.markdown("<div style='text-align: center;'><strong>Órden de Mérito</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='orden')
+      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/blob/ea8c41b65549d641815ff14cdf5bd949aca7402e/PDF/Constancia_Orden_Merito_Jossue.pdf', 'Constancia_Orden_Merito_Jossue.pdf',key='orden')
   with col3:
       st.write("")
     
@@ -48,21 +48,21 @@ def run_perfil_profesional():
   
   col1, col2, col3, col4 = st.columns(4)
   with col1:
-      # Contenido para la columna 1
+      # Contenido columna 1
       st.markdown("<div style='text-align: center;'><strong>Renta Fija</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_1')
+      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/blob/383cc0549d57c35fb255a61b257570f8194c9ee1/PDF/Fixed_income.pdf', 'Jossue_Fixed_Income.pdf',key='proyecto_1')
   with col2:
-      # Contenido para la columna 2
+      # Contenido columna 2
       st.markdown("<div style='text-align: center;'><strong>Riesgo de Mercado</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_2')
+      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/blob/383cc0549d57c35fb255a61b257570f8194c9ee1/PDF/Market_Risk.pdf', 'Jossue_Market_Risk.pdf',key='proyecto_2')
   with col3:
-      # Contenido para la columna 3
+      # Contenido columna 3
       st.markdown("<div style='text-align: center;'><strong>Riesgo de Crédito</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_3')
+      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/blob/383cc0549d57c35fb255a61b257570f8194c9ee1/PDF/Credit_Risk.pdf', 'Jossue_Credit_Risk.pdf',key='proyecto_3')
   with col4:
-      # Contenido para la columna 4
+      # Contenido columna 4
       st.markdown("<div style='text-align: center;'><strong>Fincorp</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_4')
+      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/blob/383cc0549d57c35fb255a61b257570f8194c9ee1/PDF/Fincorp.pdf', 'Jossue_Fincorp.pdf',key='proyecto_4')
   
   st.header('Objetivos Profesionales para el 2024')
   st.subheader('CEFA - BCRP')
