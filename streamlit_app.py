@@ -1,5 +1,5 @@
 import streamlit as st
-from portfolio_simulation import run_simulation
+from portfolio_simulation import run_portfolio_simulation
 from html_module import generate_html
 from perfil_profesional import run_perfil_profesional
 
