@@ -95,7 +95,8 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
 def run_portfolio_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
     yf.pdr_override()
-    risk_free_rate=float(rf())
+    #risk_free_rate=float(rf())
+    risk_free_rate=0.03
     
     st.write('Maximice el rendimiento ajustado al riesgo de sus inversiones. Esta aplicación ofrece simulaciones Monte Carlo y análisis de cartera para ayudarle a encontrar la combinación ideal de activos. Con acceso a datos financieros de Yahoo Finance en tiempo real y visualizaciones claras de rendimiento y riesgo, permitiendo simplificar la toma de decisiones estratégicas en inversiones.')
     st.write(**Consideraciones**)
