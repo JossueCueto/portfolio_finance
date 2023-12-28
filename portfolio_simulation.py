@@ -115,10 +115,10 @@ def run_portfolio_simulation():
         st.write('')
         st.session_state['number_assets'] = number_assets
     with col2:
-        start = st.text_input('Ingrese la fecha de inicio (YYYY-MM-DD):', st.session_state['start'])
+        start = st.text_input('Fecha de inicio (YYYY-MM-DD):', st.session_state['start'])
         st.session_state['start'] = start
     with col3:
-        end = st.text_input('Ingrese la fecha de cierre (YYYY-MM-DD):', st.session_state['end'])
+        end = st.text_input('Fecha de cierre (YYYY-MM-DD):', st.session_state['end'])
         st.session_state['end'] = end
 
     # Inicializa los tickers en session_state
