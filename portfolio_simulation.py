@@ -94,7 +94,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
         # Nota: no es necesario llamar a plt.show() cuando se usa st.pyplot()
         st.write(f'La tasa libre de riesgo es {risk_free_rate}')
 
-def run_simulation():
+def run_portolio_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
     yf.pdr_override()
 
