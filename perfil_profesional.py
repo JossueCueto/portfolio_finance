@@ -19,10 +19,7 @@ def run_perfil_profesional():
   with col2:
       # Contenido para la columna 2
       st.markdown("<div style='text-align: center;'><strong>Órden de Mérito</strong></div>", unsafe_allow_html=True)
-      # Centrar el botón de descarga
-      st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf', key='orden')
-      st.markdown("</div>", unsafe_allow_html=True)
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='orden')
     
   with col3:
       st.write("")
