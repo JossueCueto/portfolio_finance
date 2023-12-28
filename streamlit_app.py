@@ -7,7 +7,7 @@ from perfil_profesional import run_perfil_profesional
 html_content = generate_html()
 
 # Definir la variable 'menu' antes de usarla
-menu = st.sidebar.selectbox('',['Sobre mi', 'Trabajos'])
+menu = st.sidebar.selectbox('',['Perfil Profesional', 'Optmización de Portafoli'])
 st.write(" ")
 
 with st.sidebar:
@@ -24,6 +24,6 @@ with st.sidebar:
 if menu == 'Perfil Profesional':
     st.title('Perfil Profesional')
     run_perfil_profesional()
-elif menu == 'Trabajos':
+elif menu == 'Optmización de Portafolio':
     st.title('Optimización de portafolio')
     run_portfolio_simulation()
