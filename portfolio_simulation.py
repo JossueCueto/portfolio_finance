@@ -50,7 +50,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
     valores_utilidad=np.append(valores_utilidad,max_sharpe)
     valores_x=np.linspace(0, 100,25)
     for utilidad in valores_utilidad:
-        plt.plot(valores_x, utilidad * valores_x, 'k-', linewidth=0.5, alpha=0.5)
+        plt.plot(valores_x, utilidad * valores_x+risk_free_rate, 'k-', linewidth=0.5, alpha=0.5)
 
     plt.xlim(min_risk-0.05, max_risk+0.05)
     plt.ylim(min_rets-0.05,max_rets+0.05)
