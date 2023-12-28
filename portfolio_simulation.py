@@ -8,7 +8,7 @@ import datetime as dt
 from risk_free import risk_free_function as rf
 
 # PARTE 2: SIMULACIÓN DE PESOS DE PORTAFOLIO
-def perform_simulation(daily_returns, number_assets,tickers,industry_data):
+def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_free_rate):
     np.random.seed(10)
     npor = int(3e4)
     n_asset = number_assets
@@ -17,8 +17,6 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     port_std = np.zeros(npor)
     port_sharpe = np.zeros(npor)
     Annual_units = 252
-    risk_free_rate=float(rf())
-    #risk_free_rate=0.03
     
     for portafolio in range(npor):
         w = np.array(np.random.random(n_asset))
@@ -97,10 +95,16 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data):
 def run_portfolio_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
     yf.pdr_override()
-
+    risk_free_rate=float(rf())
+    
     st.write('Maximice el rendimiento ajustado al riesgo de sus inversiones. Esta aplicación ofrece simulaciones Monte Carlo y análisis de cartera para ayudarle a encontrar la combinación ideal de activos. Con acceso a datos financieros de Yahoo Finance en tiempo real y visualizaciones claras de rendimiento y riesgo, permitiendo simplificar la toma de decisiones estratégicas en inversiones.')
     st.write(**Consideraciones**)
-    st.write("")
+    st.markdown(f"""**Consideraciones**
+    - La simulación de Montecarlo consta de 30,000 simulaciones.
+    - La tasa libre de riesgo es el bono de tesoro de 10 años, cuyo valor actual es de {risk_free_rate} con ticker ^TNX.
+    - Los tickers se limitan a los registrados en Yahoo Finance.
+    - La cantidad máxima de analisis de tickers es de 20.
+    """)
     # Almacena el número de activos y las fechas en session_state para persistencia (valores por defecto)
     if 'number_assets' not in st.session_state:
         st.session_state['number_assets'] = 2
@@ -154,6 +158,6 @@ def run_portfolio_simulation():
             daily_returns.dropna(axis=0)
 
             if not daily_returns.empty:
-                perform_simulation(daily_returns, number_assets,tickers,industry_data)
+                perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_free_rate)
             else:
                 st.error('No se pudieron obtener datos. Porfavor verifique que la fecha o los tickers esten correctamente introducidos')
