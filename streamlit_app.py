@@ -13,17 +13,17 @@ st.write(" ")
 with st.sidebar:
     st.markdown(html_content, unsafe_allow_html=True)
     st.write(" ")
-    if menu != 'Sobre mi':
+    if menu != 'Perfil Profesional':
         st.markdown('Bachiller en Ciencias Administrativas con dominio intermedio de inglés, habilidades analíticas y comunicativas, enfocado en el mercado de capitales y gestión de portafolios.')
-    st.write("Wish to connect?")
+    st.write("Contactémonos")
     st.write("jossue.cueto@gmail.com")  # Asegúrate de reemplazar esto con tu información real
     st.write("www.linkedin.com/in/jossue-cueto/")  # Asegúrate de reemplazar esto con tu información real
     st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf')
 
 # Contenido principal de la aplicación que cambia basado en la selección del menú
-if menu == 'Sobre mi':
+if menu == 'Perfil Profesional':
     st.title('Perfil Profesional')
     run_perfil_profesional()
 elif menu == 'Trabajos':
     st.title('Optimización de portafolio')
-    run_simulation()
+    run_portfolio_simulation()
