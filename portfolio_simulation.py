@@ -98,7 +98,7 @@ def run_portfolio_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
     yf.pdr_override()
 
-st.write('Maximice el rendimiento ajustado al riesgo de sus inversiones. Esta aplicación ofrece simulaciones Monte Carlo y análisis de cartera para ayudarle a encontrar la combinación ideal de activos. Con acceso a datos financieros de Yahoo Finance en tiempo real y visualizaciones claras de rendimiento y riesgo, permitiendo simplificar la toma de decisiones estratégicas en inversiones.')
+    st.write('Maximice el rendimiento ajustado al riesgo de sus inversiones. Esta aplicación ofrece simulaciones Monte Carlo y análisis de cartera para ayudarle a encontrar la combinación ideal de activos. Con acceso a datos financieros de Yahoo Finance en tiempo real y visualizaciones claras de rendimiento y riesgo, permitiendo simplificar la toma de decisiones estratégicas en inversiones.')
 
     # Almacena el número de activos y las fechas en session_state para persistencia (valores por defecto)
     if 'number_assets' not in st.session_state:
