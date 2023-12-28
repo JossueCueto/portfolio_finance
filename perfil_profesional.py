@@ -3,7 +3,7 @@ import streamlit as st
 def run_perfil_profesional():
   
   st.header('Resumen Profesional')
-  st.write('Bachiller en Ciencias Administrativas con dominio intermedio de inglés y sólidas habilidades analíticas y comunicativas. Seleccionado para el exclusivo programa Go to Market, destacando en gestión de portafolios y análisis de mercado de capitales. Proficiente en herramientas de ofimática avanzadas, con un enfoque práctico en la mejora de procesos. Comprometido con la excelencia, me preparo para obtener la certificación CFA y destacar en el CEFA en 2024, buscando impactar en el ámbito financiero global.')
+  st.write('Bachiller en Ciencias Administrativas con dominio intermedio de inglés y sólidas habilidades analíticas y comunicativas. Seleccionado para el exclusivo programa Go to Market, destacando en gestión de portafolios y análisis de mercado de capitales. Proficiente en herramientas de ofimática avanzadas, con un enfoque práctico en la mejora de procesos. Comprometido con la excelencia, me preparo para obtener la certificación CFA y destacar en el CEFA en 2024.')
   
   st.header('Educación y Formación Académica')
   st.subheader('Ciencias Administrativas - UNJBG (2018-2022)')
