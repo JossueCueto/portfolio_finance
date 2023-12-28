@@ -18,7 +18,7 @@ with st.sidebar:
     st.write("Contactémonos")
     st.write("jossue.cueto@gmail.com")  # Asegúrate de reemplazar esto con tu información real
     st.write("www.linkedin.com/in/jossue-cueto/")  # Asegúrate de reemplazar esto con tu información real
-    st.download_button('Descargar CV', 'https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/CV_Jossue.pdf, 'Jossue_CV.pdf')
+    st.download_button('Descargar CV', 'https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/CV_Jossue.pdf', 'Jossue_CV.pdf')
 
 # Contenido principal de la aplicación que cambia basado en la selección del menú
 if menu == 'Perfil Profesional':
