@@ -28,8 +28,8 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
 
     plt.scatter(port_std, port_rets, c=port_sharpe, cmap='viridis', s=10)
     
-    plt.xlabel('Risk')
-    plt.ylabel('Expected Return')
+    plt.xlabel('Volatilidad - Riesgo')
+    plt.ylabel('Retorno Esperado')
     plt.colorbar(label='Sharpe Ratio')
 
     max_sharpe=port_sharpe.max()
@@ -89,7 +89,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
     with col2:
         # Mostrar un gráfico matplotlib en Streamlit
         st.pyplot(plt)
-        # Nota: no es necesario llamar a plt.show() cuando se usa st.pyplot()
+        st.writer('El gráfico generado visualiza la búsqueda de la cartera de inversión más eficiente, mostrando el equilibrio entre riesgo y retorno. Los puntos representan diferentes carteras; el color indica su desempeño (ratio de Sharpe). **El punto rojo destaca la cartera óptima**. Las líneas grises muestran combinaciones de igual utilidad, con la óptima hacia el tope izquierdo.')
 
 def run_portfolio_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
