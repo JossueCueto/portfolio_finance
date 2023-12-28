@@ -25,6 +25,8 @@ def run_perfil_profesional():
       st.markdown("</div>", unsafe_allow_html=True)
     
   with col3:
+      st.write("")
+
 
   st.subheader('Ofimática - ITEL')
   st.write('Técnico en Ofimática  ')
