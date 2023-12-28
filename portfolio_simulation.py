@@ -107,7 +107,8 @@ def run_portfolio_simulation():
         st.session_state['start'] = dt.date.today() - dt.timedelta(days=365)
     if 'end' not in st.session_state:
         st.session_state['end'] = dt.date.today()
-    col1, col2,col3= st.columns([3])
+        
+    col1, col2,col3= st.columns(3)
     with col1:
         # Almacena el número de activos y las fechas que se escriban
         number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=st.session_state['number_assets'], step=1)
