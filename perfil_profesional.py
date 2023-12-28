@@ -7,7 +7,7 @@ def run_perfil_profesional():
   
   st.header('Educación y Formación Académica')
   st.subheader('Ciencias Administrativas - UNJBG (2018-2022)')
-  st.write('Bachiller en Ciencias Administrativas, segundo lugar de mi promoción.')
+  st.write('Bachiller en Ciencias Administrativas con distinción, alcanzando el segundo lugar entre 78 estudiantes.')
   st.markdown(""" **Cursos relevantes:** Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
   # Crear 3 columnas del mismo tamaño
   col1, col2,col3= st.columns([1,1,2])
@@ -25,7 +25,7 @@ def run_perfil_profesional():
       st.write("")
     
   st.subheader('Ofimática - ITEL')
-  st.write('Técnico en Ofimática  ')
+  st.write('Técnico en Ofimática con énfasis en Excel y Access, incluyendo programación en VBA para la creación de macros personalizadas que mejoran la eficiencia operativa.')
   st.markdown(""" **Cursos Relevantes:** Base de datos I y II, Hoja electrónica I y II (Excel y VBA)""")
   # Crear 4 columnas del mismo tamaño
   col1, col2,col3= st.columns([1,1,2])
