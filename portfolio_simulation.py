@@ -112,6 +112,7 @@ def run_portfolio_simulation():
     with col1:
         # Almacena el número de activos y las fechas que se escriban
         number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=st.session_state['number_assets'], step=1)
+        st.write('')
         st.session_state['number_assets'] = number_assets
     with col2:
         start = st.text_input('Ingrese la fecha de inicio (YYYY-MM-DD):', st.session_state['start'])
