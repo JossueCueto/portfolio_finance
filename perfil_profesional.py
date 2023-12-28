@@ -9,7 +9,7 @@ def run_perfil_profesional():
   st.subheader('Ciencias Administrativas - UNJBG (2018-2022)')
   st.write('Bachiller en Ciencias Administrativas, segundo lugar de mi promoción.')
   st.markdown(""" **Cursos relevantes:** Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
-  # Crear 4 columnas del mismo tamaño
+  # Crear 3 columnas del mismo tamaño
   col1, col2,col3= st.columns([1,1,2])
   with col1:
       # Contenido para la columna 1
@@ -27,6 +27,18 @@ def run_perfil_profesional():
   st.subheader('Ofimática - ITEL')
   st.write('Técnico en Ofimática  ')
   st.markdown(""" **Cursos Relevantes:** Base de datos I y II, Hoja electrónica I y II (Excel y VBA)""")
+  # Crear 4 columnas del mismo tamaño
+  col1, col2,col3= st.columns([1,1,2])
+  with col1:
+      # Contenido para la columna 1
+      st.markdown("<div style='text-align: center;'><strong>Certificado</strong></div>", unsafe_allow_html=True)
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='ofimatica')
+  
+  with col2:
+      st.write("")
+    
+  with col3:
+      st.write("")
   st.subheader('Go to Market - NetValU')
   st.write('Seleccionado para un programa altamente competitivo de finanzas corporativas, inversiones, riesgos y empleabilidad, seleccionado entre más de 170 candidatos a nivel nacional para ser uno de los 20 participantes.')
   # Your markdown content before the download button
