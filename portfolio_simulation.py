@@ -89,7 +89,7 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
     with col2:
         # Mostrar un gráfico matplotlib en Streamlit
         st.pyplot(plt)
-        st.writer('El gráfico generado visualiza la búsqueda de la cartera de inversión más eficiente, mostrando el equilibrio entre riesgo y retorno. Los puntos representan diferentes carteras; el color indica su desempeño (ratio de Sharpe). **El punto rojo destaca la cartera óptima**. Las líneas grises muestran combinaciones de igual utilidad, con la óptima hacia el tope izquierdo.')
+        st.write('**Nota:**El gráfico generado visualiza la búsqueda de la cartera de inversión más eficiente, mostrando el equilibrio entre riesgo y retorno. Los puntos representan diferentes carteras; el color indica su desempeño (ratio de Sharpe). **El punto rojo destaca la cartera óptima**. Las líneas grises muestran combinaciones de igual utilidad, con la óptima hacia el tope izquierdo.')
 
 def run_portfolio_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
