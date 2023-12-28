@@ -91,8 +91,8 @@ def run_perfil_profesional():
   Apoyo administrativo en la ejecución y mejora de los planes y proyectos de la empresa.
   - Ejecución y mejora de los procesos administrativos relacionados a gestión de activos fijos, prestación del servicio contable, gestión de RRHH y gestión de las redes sociales.
   - Apoyo en trámites relacionados a constitución de empresas, aumento de capital y otras modificaciones de estatutos.
-  **Logro:** Mejora del sistema de gestión de activos fijo e implementación del SSST
   """)
+  st.write('**Logro:** Mejora del sistema de gestión de activos fijo e implementación del SSST')
   st.subheader('Asistente Administrativo - Secoemp EIRL (2021-2022)')
   st.markdown("""
   Apoyo administrativo en la ejecución de los planes y proyectos de la empresa.
