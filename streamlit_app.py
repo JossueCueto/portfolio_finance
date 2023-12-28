@@ -22,8 +22,8 @@ with st.sidebar:
     st.write("www.linkedin.com/in/jossue-cueto/")  # Asegúrate de reemplazar esto con tu información real
     
     response_cv = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/CV_Jossue.pdf')
-    pdf_cv = BytesIO(response.content)
-    st.download_button('Descargar CV', 'https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/CV_Jossue.pdf', 'Jossue_CV.pdf')
+    pdf_cv = BytesIO(response_cv.content)
+    st.download_button('Descargar CV', pdf_cv, 'Jossue_CV.pdf','application/pdf')
 
 # Contenido principal de la aplicación que cambia basado en la selección del menú
 if menu == 'Perfil Profesional':
