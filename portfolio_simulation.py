@@ -7,6 +7,8 @@ import yfinance as yf
 import datetime as dt
 from risk_free import risk_free_function as rf
 
+st.write('Maximice el rendimiento ajustado al riesgo de sus inversiones. Esta aplicación ofrece simulaciones Monte Carlo y análisis de cartera para ayudarle a encontrar la combinación ideal de activos. Con acceso a datos financieros de Yahoo Finance en tiempo real y visualizaciones claras de rendimiento y riesgo, permitiendo simplificar la toma de decisiones estratégicas en inversiones.')
+
 # PARTE 2: SIMULACIÓN DE PESOS DE PORTAFOLIO
 def perform_simulation(daily_returns, number_assets,tickers,industry_data):
     np.random.seed(10)
