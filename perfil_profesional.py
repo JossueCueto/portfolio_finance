@@ -14,11 +14,17 @@ def run_perfil_profesional():
   with col1:
       # Contenido columna 1
       st.markdown("<div style='text-align: center;'><strong>Certificado Bachiller</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'https://github.com/JossueCueto/portfolio_finance/eb31d4028ec06584205804a8d770434139c238ee/PDF/Certificado_bachiller.pdf', 'Jossue_Certificado_Bachiller.pdf',key='bachiller')
+
+      response_bachiller = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Certificado_bachiller.pdf')
+      pdf_bachiller = BytesIO(response_bachiller.content)
+      st.download_button('Descargar', pdf_bachiller, 'Certificado_bachiller.pdf','application/pdf')
   with col2:
       # Contenido columna 2
       st.markdown("<div style='text-align: center;'><strong>Órden de Mérito</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/blob/ea8c41b65549d641815ff14cdf5bd949aca7402e/PDF/Constancia_Orden_Merito_Jossue.pdf', 'Jossue_Constancia_Orden_Merito.pdf',key='orden')
+      
+      response_orden_merito = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Constancia_Orden_Merito_Jossue.pdf')
+      pdf_orden_merito = BytesIO(response_orden_merito.content)
+      st.download_button('Descargar', pdf_orden_merito, 'Jossue_Constancia_Orden_Merito.pdf','application/pdf')
   with col3:
       st.write("")
     
@@ -30,7 +36,10 @@ def run_perfil_profesional():
   with col1:
       # Contenido columna 1
       st.markdown("<div style='text-align: center;'><strong>Certificado</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'https://github.com/JossueCueto/portfolio_finance/eb31d4028ec06584205804a8d770434139c238ee/PDF/Certificado_itel.pdf', 'Jossue_Certificado_Itel',key='ofimatica')
+
+      response_itel = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Certificado_itel.pdf')
+      pdf_itel = BytesIO(response_itel.content)
+      st.download_button('Descargar', pdf_itel, 'Jossue_Itel.pdf','application/pdf')
   with col2:
       st.write("")
   with col3:
@@ -50,19 +59,31 @@ def run_perfil_profesional():
   with col1:
       # Contenido columna 1
       st.markdown("<div style='text-align: center;'><strong>Renta Fija</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/383cc0549d57c35fb255a61b257570f8194c9ee1/PDF/Fixed_income.pdf', 'Jossue_Fixed_Income.pdf',key='proyecto_1')
+      
+      response_fixed_income = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Fixed_income.pdf')
+      pdf_fixed_income = BytesIO(response_fixed_income.content)
+      st.download_button('Descargar', pdf_fixed_income, 'Jossue_Fixed_Income.pdf','application/pdf')
   with col2:
       # Contenido columna 2
       st.markdown("<div style='text-align: center;'><strong>Riesgo de Mercado</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/383cc0549d57c35fb255a61b257570f8194c9ee1/PDF/Market_Risk.pdf', 'Jossue_Market_Risk.pdf',key='proyecto_2')
+    
+      response_market_risk = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Market_Risk.pdf')
+      pdf_market_risk = BytesIO(response_market_risk.content)
+      st.download_button('Descargar', pdf_fixed_income, 'Jossue_Market_Risk.pdf','application/pdf')
   with col3:
       # Contenido columna 3
       st.markdown("<div style='text-align: center;'><strong>Riesgo de Crédito</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/383cc0549d57c35fb255a61b257570f8194c9ee1/PDF/Credit_Risk.pdf', 'Jossue_Credit_Risk.pdf',key='proyecto_3')
+      
+      response_credit_risk = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Credit_Risk.pdf')
+      pdf_credit_risk = BytesIO(response_credit_risk.content)
+      st.download_button('Descargar', pdf_credit_risk, 'Jossue_Credit_Risk.pdf','application/pdf')
   with col4:
       # Contenido columna 4
       st.markdown("<div style='text-align: center;'><strong>Fincorp</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'https://raw.github.com/JossueCueto/portfolio_finance/383cc0549d57c35fb255a61b257570f8194c9ee1/PDF/Fincorp.pdf', 'Jossue_Fincorp.pdf',key='proyecto_4')
+
+      response_fincorp = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Fincorp.pdf')
+      pdf_fincorp = BytesIO(response_fincorp.content)
+      st.download_button('Descargar', pdf_fincorp, 'Jossue_Fincorp.pdf','application/pdf')
   
   st.header('Objetivos Profesionales para el 2024')
   st.subheader('CEFA - BCRP')
