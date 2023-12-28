@@ -99,7 +99,8 @@ def run_portfolio_simulation():
     yf.pdr_override()
 
     st.write('Maximice el rendimiento ajustado al riesgo de sus inversiones. Esta aplicación ofrece simulaciones Monte Carlo y análisis de cartera para ayudarle a encontrar la combinación ideal de activos. Con acceso a datos financieros de Yahoo Finance en tiempo real y visualizaciones claras de rendimiento y riesgo, permitiendo simplificar la toma de decisiones estratégicas en inversiones.')
-
+    st.write(**Consideraciones**)
+    st.write("")
     # Almacena el número de activos y las fechas en session_state para persistencia (valores por defecto)
     if 'number_assets' not in st.session_state:
         st.session_state['number_assets'] = 2
@@ -111,7 +112,7 @@ def run_portfolio_simulation():
     col1, col2,col3= st.columns(3)
     with col1:
         # Almacena el número de activos y las fechas que se escriban
-        number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=st.session_state['number_assets'], step=1)
+        number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, max_value=20,value=st.session_state['number_assets'], step=1)
         st.write('')
         st.session_state['number_assets'] = number_assets
     with col2:
@@ -155,4 +156,4 @@ def run_portfolio_simulation():
             if not daily_returns.empty:
                 perform_simulation(daily_returns, number_assets,tickers,industry_data)
             else:
-                st.error('No se pudieron obtener datos para los tickers proporcionados.')
+                st.error('No se pudieron obtener datos. Porfavor verifique que la fecha o los tickers esten correctamente introducidos')
