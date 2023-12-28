@@ -3,42 +3,9 @@ import streamlit as st
 def run_perfil_profesional():
   
   st.header('Resumen Profesional')
-  st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
+  st.write('Bachiller en Ciencias Administrativas con dominio intermedio de inglés y sólidas habilidades analíticas y comunicativas. Seleccionado para el exclusivo programa Go to Market, destacando en gestión de portafolios y análisis de mercado de capitales. Proficiente en herramientas de ofimática avanzadas, con un enfoque práctico en la mejora de procesos. Comprometido con la excelencia, me preparo para obtener la certificación CFA y destacar en el CEFA en 2024, buscando impactar en el ámbito financiero global.')
   
   st.header('Educación y Formación Académica')
-  st.subheader('Go to Market - NetValU (2023)')
-  st.write('Seleccionado para un programa altamente competitivo de finanzas corporativas, inversiones, riesgos y empleabilidad, seleccionado entre más de 170 candidatos a nivel nacional para ser uno de los 20 participantes.')
-  # Your markdown content before the download button
-  st.markdown("""
-  - **Propuesta de Portafolio de inversión de renta fija**: Elaboración de un portafolio de inversión compuesto por 100% bonos corporativos en base a un análisis macroeconómico, sectorial y de ratios financieros de las empresas.
-  - **Medición de Riesgos de Portafolio de Inversión**: Análisis del riesgo de mercado y su impacto en el portafolio, considerando variables macroeconómicas y sensibilidad a factores de riesgo.
-  - **Evaluación del Riesgo Crediticio**: Evaluación de la calidad crediticia para la compra de un bono corporativo de la empresa H2Olmos usando métricas de riesgo de crédito.
-  - **Budget de Flujo de Caja y P&L**: Estimación de los resultados financieros de la compañía Netflix en los últimos 2 trimestres del 2023.
-  """)
-
-  # Crear 4 columnas del mismo tamaño
-  col1, col2, col3, col4 = st.columns(4)
-
-  with col1:
-      # Contenido para la columna 1
-      st.markdown("<div style='text-align: center;'><strong>Renta Fija</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_1')
-  
-  with col2:
-      # Contenido para la columna 2
-      st.markdown("<div style='text-align: center;'><strong>Riesgo de Mercado</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_2')
-  
-  with col3:
-      # Contenido para la columna 3
-      st.markdown("<div style='text-align: center;'><strong>Riesgo de Crédito</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_3')
-  
-  with col4:
-      # Contenido para la columna 4
-      st.markdown("<div style='text-align: center;'><strong>Fincorp</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_4')
-    
   st.subheader('Ciencias Administrativas - UNJBG (2018-2022)')
   st.write('Bachiller en Ciencias Administrativas con distinción, alcanzando el segundo lugar entre 78 estudiantes.')
   st.markdown(""" **Cursos relevantes:** Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
@@ -72,6 +39,41 @@ def run_perfil_profesional():
     
   with col3:
       st.write("")
+
+  st.header('Cursos de Especialización')
+  st.subheader('Go to Market - NetValU (2023)')
+  st.write('Seleccionado para un programa altamente competitivo de finanzas corporativas, inversiones, riesgos y empleabilidad, seleccionado entre más de 170 candidatos a nivel nacional para ser uno de los 20 participantes.')
+  # Your markdown content before the download button
+  st.markdown("""
+  - **Propuesta de Portafolio de inversión de renta fija**: Elaboración de un portafolio de inversión compuesto por 100% bonos corporativos en base a un análisis macroeconómico, sectorial y de ratios financieros de las empresas.
+  - **Medición de Riesgos de Portafolio de Inversión**: Análisis del riesgo de mercado y su impacto en el portafolio, considerando variables macroeconómicas y sensibilidad a factores de riesgo.
+  - **Evaluación del Riesgo Crediticio**: Evaluación de la calidad crediticia para la compra de un bono corporativo de la empresa H2Olmos usando métricas de riesgo de crédito.
+  - **Budget de Flujo de Caja y P&L**: Estimación de los resultados financieros de la compañía Netflix en los últimos 2 trimestres del 2023.
+  """)
+
+  # Crear 4 columnas del mismo tamaño
+  col1, col2, col3, col4 = st.columns(4)
+
+  with col1:
+      # Contenido para la columna 1
+      st.markdown("<div style='text-align: center;'><strong>Renta Fija</strong></div>", unsafe_allow_html=True)
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_1')
+  
+  with col2:
+      # Contenido para la columna 2
+      st.markdown("<div style='text-align: center;'><strong>Riesgo de Mercado</strong></div>", unsafe_allow_html=True)
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_2')
+  
+  with col3:
+      # Contenido para la columna 3
+      st.markdown("<div style='text-align: center;'><strong>Riesgo de Crédito</strong></div>", unsafe_allow_html=True)
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_3')
+  
+  with col4:
+      # Contenido para la columna 4
+      st.markdown("<div style='text-align: center;'><strong>Fincorp</strong></div>", unsafe_allow_html=True)
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_4')
+    
   
   st.header('Objetivos Profesionales para el 2024')
   st.subheader('CEFA - BCRP')
