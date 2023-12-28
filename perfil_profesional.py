@@ -14,7 +14,7 @@ def run_perfil_profesional():
   with col1:
       # Contenido columna 1
       st.markdown("<div style='text-align: center;'><strong>Certificado Bachiller</strong></div>", unsafe_allow_html=True)
-      st.download_button('Descargar', 'PDF/CV_Jossue.pdf', 'CV_Jossue.pdf',key='bachiller')
+      st.download_button('Descargar', 'CV_Jossue.pdf', 'CV_Jossue.pdf',key='bachiller')
   with col2:
       # Contenido columna 2
       st.markdown("<div style='text-align: center;'><strong>Órden de Mérito</strong></div>", unsafe_allow_html=True)
