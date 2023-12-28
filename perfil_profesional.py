@@ -6,40 +6,7 @@ def run_perfil_profesional():
   st.write('Aquí puedes escribir un resumen de tu introducción a la ciencia de datos o cualquier otro contenido.')
   
   st.header('Educación y Formación Académica')
-  st.subheader('Ciencias Administrativas - UNJBG (2018-2022)')
-  st.write('Bachiller en Ciencias Administrativas con distinción, alcanzando el segundo lugar entre 78 estudiantes.')
-  st.markdown(""" **Cursos relevantes:** Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
-  # Crear 3 columnas del mismo tamaño
-  col1, col2,col3= st.columns([1,1,2])
-  with col1:
-      # Contenido para la columna 1
-      st.markdown("<div style='text-align: center;'><strong>Certificado Bachiller</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='bachiller')
-  
-  with col2:
-      # Contenido para la columna 2
-      st.markdown("<div style='text-align: center;'><strong>Órden de Mérito</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='orden')
-    
-  with col3:
-      st.write("")
-    
-  st.subheader('Ofimática - ITEL')
-  st.write('Técnico en Ofimática con énfasis en Excel y Access, incluyendo programación en VBA para la creación de macros personalizadas que mejoran la eficiencia operativa.')
-  st.markdown(""" **Cursos Relevantes:** Base de datos I y II, Hoja electrónica I y II (Excel y VBA)""")
-  # Crear 4 columnas del mismo tamaño
-  col1, col2,col3= st.columns([1,1,2])
-  with col1:
-      # Contenido para la columna 1
-      st.markdown("<div style='text-align: center;'><strong>Certificado</strong></div>", unsafe_allow_html=True)
-      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='ofimatica')
-  
-  with col2:
-      st.write("")
-    
-  with col3:
-      st.write("")
-  st.subheader('Go to Market - NetValU')
+  st.subheader('Go to Market - NetValU (2023)')
   st.write('Seleccionado para un programa altamente competitivo de finanzas corporativas, inversiones, riesgos y empleabilidad, seleccionado entre más de 170 candidatos a nivel nacional para ser uno de los 20 participantes.')
   # Your markdown content before the download button
   st.markdown("""
@@ -71,6 +38,40 @@ def run_perfil_profesional():
       # Contenido para la columna 4
       st.markdown("<div style='text-align: center;'><strong>Fincorp</strong></div>", unsafe_allow_html=True)
       st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='proyecto_4')
+    
+  st.subheader('Ciencias Administrativas - UNJBG (2018-2022)')
+  st.write('Bachiller en Ciencias Administrativas con distinción, alcanzando el segundo lugar entre 78 estudiantes.')
+  st.markdown(""" **Cursos relevantes:** Teoría Económica I y II, Formulación y evaluación de proyectos, Finanzas I, II y III""")
+  # Crear 3 columnas del mismo tamaño
+  col1, col2,col3= st.columns([1,1,2])
+  with col1:
+      # Contenido para la columna 1
+      st.markdown("<div style='text-align: center;'><strong>Certificado Bachiller</strong></div>", unsafe_allow_html=True)
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='bachiller')
+  
+  with col2:
+      # Contenido para la columna 2
+      st.markdown("<div style='text-align: center;'><strong>Órden de Mérito</strong></div>", unsafe_allow_html=True)
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='orden')
+    
+  with col3:
+      st.write("")
+    
+  st.subheader('Ofimática - ITEL (2021)')
+  st.write('Técnico en Ofimática con énfasis en Excel y Access, incluyendo programación en VBA para la creación de macros personalizadas que mejoran la eficiencia operativa.')
+  st.markdown(""" **Cursos Relevantes:** Base de datos I y II, Hoja electrónica I y II (Excel y VBA)""")
+  # Crear 4 columnas del mismo tamaño
+  col1, col2,col3= st.columns([1,1,2])
+  with col1:
+      # Contenido para la columna 1
+      st.markdown("<div style='text-align: center;'><strong>Certificado</strong></div>", unsafe_allow_html=True)
+      st.download_button('Download Resume', 'path_to_resume.pdf', 'Tu Resumen.pdf',key='ofimatica')
+  
+  with col2:
+      st.write("")
+    
+  with col3:
+      st.write("")
   
   st.header('Objetivos Profesionales para el 2024')
   st.subheader('CEFA - BCRP')
