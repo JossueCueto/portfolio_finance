@@ -1,7 +1,7 @@
 def generate_html():
     #URL de la foto
     image_url = 'https://raw.githubusercontent.com/JossueCueto/portfolio_finance/main/img/Foto.jpg'
-    outer_container = f"""
+    contenedor_html = f"""
     <style>
         .flex-container {{
             display: flex;
@@ -28,4 +28,4 @@ def generate_html():
         </div>
     </div>
     """
-    return outer_container
+    return contenedor_html
