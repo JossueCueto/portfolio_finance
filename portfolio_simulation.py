@@ -107,14 +107,17 @@ def run_portfolio_simulation():
         st.session_state['start'] = dt.date.today() - dt.timedelta(days=365)
     if 'end' not in st.session_state:
         st.session_state['end'] = dt.date.today()
-
-    # Almacena el número de activos y las fechas que se escriban
-    number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=st.session_state['number_assets'], step=1)
-    st.session_state['number_assets'] = number_assets
-    start = st.text_input('Ingrese la fecha de inicio (YYYY-MM-DD):', st.session_state['start'])
-    st.session_state['start'] = start
-    end = st.text_input('Ingrese la fecha de cierre (YYYY-MM-DD):', st.session_state['end'])
-    st.session_state['end'] = end
+    col1, col2,col3= st.columns([3])
+    with col1:
+        # Almacena el número de activos y las fechas que se escriban
+        number_assets = st.number_input('Cuántos valores analizaremos:', min_value=1, value=st.session_state['number_assets'], step=1)
+        st.session_state['number_assets'] = number_assets
+    with col2:
+        start = st.text_input('Ingrese la fecha de inicio (YYYY-MM-DD):', st.session_state['start'])
+        st.session_state['start'] = start
+    with col3:
+        end = st.text_input('Ingrese la fecha de cierre (YYYY-MM-DD):', st.session_state['end'])
+        st.session_state['end'] = end
 
     # Inicializa los tickers en session_state
     # st.session_state es una herramienta para mantener información entre diferentes ejecuciones del script.
