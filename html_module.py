@@ -1,6 +1,6 @@
 def generate_html():
     #URL de la foto
-    image_url = 'https://github.com/JossueCueto/portfolio_finance/blob/c0d65e5bbec6db2e83a061b9758d9ef39d642b72/img/Foto.jpg'
+    image_url = 'https://raw.githubusercontent.com/JossueCueto/portfolio_finance/main/img/Foto.jpg'
     outer_container = f"""
     <style>
         .flex-container {{
