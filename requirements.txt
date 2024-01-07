@@ -7,5 +7,4 @@ typing-extensions
 yfinance
 pandas_datareader
 datetime
-io
 requests
