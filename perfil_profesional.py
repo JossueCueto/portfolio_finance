@@ -90,10 +90,10 @@ def run_perfil_profesional():
   st.header('Objetivos Profesionales para el 2024')
   st.subheader('CEFA - BCRP')
   st.write('Al haber sido seleccionado para participar en el Curso de Extensión de Finanzas Avanzadas ' + 
-            '(CEFA) organizado por el BCRP a realizarse de Enero a Marzo del 2024, me he planteado como ' +
-             'objetivo finalizar entre los primeros puestos. Esta meta refleja mi determinación de demostrar ' +
-             'y profundizar mi capacidad y conocimiento en el área financiera, así como mi compromiso con el ' +
-             'logro de la excelencia en un entorno competitivo.')
+            '(CEFA) organizado por el BCRP a realizarse de Enero a Marzo del 2024, me he propuesto absorber ' +
+             'todo el conocimiento y las experiencias que pueda. Este objetivo subraya mi pasión por enriquecer ' + 
+             'y expandir mi comprensión en el campo financiero, así como mi compromiso por crecer y superarme en un ' +
+             'entorno desafiante.')
 
   st.subheader('CFA')
   st.write('Además, para el año 2024, me he propuesto aprobar el primer nivel del Chartered Financial ' +
