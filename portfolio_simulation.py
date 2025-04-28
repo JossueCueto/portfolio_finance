@@ -151,12 +151,19 @@ def run_portfolio_simulation():
                     asset_data = yf.download(ticker, start=start, end=end)
                     
                     if 'Adj Close' in asset_data.columns:
-                        daily_prices[ticker] = asset_data['Adj Close']
-                        daily_returns[ticker] = np.log(daily_prices[ticker] / daily_prices[ticker].shift(1))
-                        industry = yf.Ticker(ticker).info.get('industry', 'Industria no disponible')
-                        industry_data = np.append(industry_data, industry)
+                        price_series = asset_data['Adj Close']
+                    elif 'Close' in asset_data.columns:
+                        st.warning(f"No se encontró 'Adj Close' para {ticker}, se usará 'Close'.")
+                        price_series = asset_data['Close']
                     else:
-                        st.warning(f"No se encontró 'Adj Close' para {ticker}. Verifique si el ticker es correcto.")
+                        st.error(f"No se encontró ni 'Adj Close' ni 'Close' para {ticker}.")
+                        continue  # Pasa al siguiente ticker si no hay datos válidos
+                    
+                    daily_prices[ticker] = price_series
+                    daily_returns[ticker] = np.log(price_series / price_series.shift(1))
+                    
+                    industry = yf.Ticker(ticker).info.get('industry', 'Industria no disponible')
+                    industry_data.append(industry)
             
             daily_returns.dropna(axis=0, inplace=True)
             
