@@ -147,7 +147,7 @@ def run_portfolio_simulation():
             industry_data=[]
             
             for ticker in tickers:
-                if ticker:  # Asegurarse de que el ticker no esté vacío
+                if ticker:
                     asset_data = yf.download(ticker, start=start, end=end)
                     
                     if 'Adj Close' in asset_data.columns:
@@ -157,11 +157,13 @@ def run_portfolio_simulation():
                         industry_data = np.append(industry_data, industry)
                     else:
                         st.warning(f"No se encontró 'Adj Close' para {ticker}. Verifique si el ticker es correcto.")
+            
+            daily_returns.dropna(axis=0, inplace=True)
+            
+            tickers_validos = list(daily_returns.columns)
+            
+            if not daily_returns.empty:
+                perform_simulation(daily_returns, len(tickers_validos), tickers_validos, industry_data, risk_free_rate)
+            else:
+                st.error('No se pudieron obtener datos. Por favor verifique que la fecha o los tickers estén correctamente introducidos.')
 
-
-                daily_returns.dropna(axis=0, inplace=True)
-    
-                if not daily_returns.empty:
-                    perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_free_rate)
-                else:
-                    st.error('No se pudieron obtener datos. Porfavor verifique que la fecha o los tickers esten correctamente introducidos')
