@@ -16,7 +16,7 @@ with st.sidebar:
     st.markdown(html_content, unsafe_allow_html=True)
     st.write(" ")
     if menu != 'Perfil Profesional':
-        st.markdown('Bachiller en Ciencias Administrativas con dominio intermedio de inglés, habilidades analíticas y comunicativas, enfocado en el área financiera.')
+        st.markdown('Bachiller en Ciencias Administrativas con dominio intermedio de Inglés, habilidades analíticas y comunicativas, enfocado en el área financiera.')
     st.write("Contactémonos")
     st.write("jossue.cueto@gmail.com")  # Asegúrate de reemplazar esto con tu información real
     st.write("www.linkedin.com/in/jossue-cueto/")  # Asegúrate de reemplazar esto con tu información real
