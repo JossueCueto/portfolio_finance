@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import pandas_datareader.data as pdr
 import matplotlib.pyplot as plt
 import yfinance as yf
 import datetime as dt
@@ -149,7 +148,7 @@ def run_portfolio_simulation():
             
             for ticker in tickers:
                 if ticker:  # Asegurarse de que el ticker no esté vacío
-                    asset_data = pdr.get_data_yahoo(ticker, start, end)
+                    asset_data = yf.download(ticker, start=start, end=end)
                     daily_prices[ticker] = asset_data['Adj Close']
                     daily_returns[ticker] = np.log(daily_prices[ticker] / daily_prices[ticker].shift(1))
                     industry=yf.Ticker(ticker).info.get('industry', 'Industria no disponible')
