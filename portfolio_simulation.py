@@ -93,7 +93,6 @@ def perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_f
 
 def run_portfolio_simulation():
     # PARTE 1: EXTRACCIÓN DE DATOS
-    yf.pdr_override()
     risk_free_rate=float(rf())
     risk_free_rate_percent=round(risk_free_rate * 100, 2)  # Redondeo a decimales
     
@@ -156,7 +155,7 @@ def run_portfolio_simulation():
                     industry=yf.Ticker(ticker).info.get('industry', 'Industria no disponible')
                     industry_data=np.append(industry_data, industry)
 
-            daily_returns.dropna(axis=0)
+            daily_returns.dropna(axis=0, inplace=True)
 
             if not daily_returns.empty:
                 perform_simulation(daily_returns, number_assets,tickers,industry_data,risk_free_rate)
