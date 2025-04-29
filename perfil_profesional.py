@@ -48,6 +48,18 @@ def run_perfil_profesional():
       st.write("")
 
   st.header('Cursos de Especialización')
+  st.subheader('Capacitación Cámara Central de Riesgo de Contraparte - NUAM Exchange (2024)')
+  st.write('Capacitación brindada a las SABs respecto al nuevo entorno de Compensación, liquidación y servicio Post Negociación del mercado regional integrado NUAM.')
+
+  st.subheader('Gestión Integral de Riesgos - Equilibrum Finaciero (2024)')
+  st.write('Curso especializado en la identificación, evaluación y gestión de riesgos.')
+  st.markdown("""
+  - **Riesgo Operacional :** Identificación, evaluación y mitigación de riesgos derivados de fallos en procesos internos, personas, sistemas o eventos externos.
+  - **Riesgo de Mercado:** Análisis y gestión de la exposición a pérdidas financieras debido a fluctuaciones en precios de mercado, tasas de interés y tipos de cambio.
+  - **Riesgo de crédito:** Evaluación y control del riesgo asociado a la posibilidad de incumplimiento de obligaciones financieras por parte de los prestatarios
+  - **Marco normativo SBS:** Conocimiento y aplicación de las normativas y regulaciones establecidas por la Superintendencia de Banca, Seguros y AFP (SBS).
+  """)
+  
   st.subheader('Go to Market - NetValU (2023)')
   st.write('Seleccionado para un programa altamente competitivo de finanzas corporativas, inversiones, riesgos y empleabilidad, seleccionado entre más de 170 candidatos a nivel nacional para ser uno de los 20 participantes.')
   st.markdown("""
@@ -114,7 +126,7 @@ def run_perfil_profesional():
   Apoyo en la ejecución y mantenimiento de operaciones bursátiles y extrabursátiles (FX, Rueda, OTC, entre otros).
   """)
   st.write('**Logro:** Mejora del sistema de gestión de activos fijo e implementación del SSST')
-  st.subheader('Practicante Profesional del Departamento de Gestión de Portafolios de Inversión (2024)')
+  st.subheader('Practicante Profesional del Departamento de Gestión de Portafolios de Inversión - BCRP (2024)')
   st.markdown("""
   Dentro del marco del XVII Curso de Extensión de Finanzas Avanzadas.
   - Formación relacionada a la gestión de carteras de inversión.
