@@ -15,18 +15,14 @@ def run_perfil_profesional():
   col1, col2,col3= st.columns([1,1,2])
   with col1:
       # Contenido columna 1
-      st.markdown("<div style='text-align: center;'><strong>Certificado Bachiller</strong></div>", unsafe_allow_html=True)
-
       response_bachiller = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Certificado_bachiller.pdf')
       pdf_bachiller = BytesIO(response_bachiller.content)
-      st.download_button('Descargar', pdf_bachiller, 'Certificado_bachiller.pdf','application/pdf')
+      st.download_button('Certificado de Bachiller', pdf_bachiller, 'Certificado_bachiller.pdf','application/pdf')
   with col2:
       # Contenido columna 2
-      st.markdown("<div style='text-align: center;'><strong>Órden de Mérito</strong></div>", unsafe_allow_html=True)
-      
       response_orden_merito = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Constancia_Orden_Merito_Jossue.pdf')
       pdf_orden_merito = BytesIO(response_orden_merito.content)
-      st.download_button('Descargar', pdf_orden_merito, 'Jossue_Constancia_Orden_Merito.pdf','application/pdf')
+      st.download_button('Órden de Mérito', pdf_orden_merito, 'Jossue_Constancia_Orden_Merito.pdf','application/pdf')
   with col3:
       st.write("")
     
@@ -37,11 +33,9 @@ def run_perfil_profesional():
   col1, col2,col3= st.columns([1,1,2])
   with col1:
       # Contenido columna 1
-      st.markdown("<div style='text-align: center;'><strong>Certificado</strong></div>", unsafe_allow_html=True)
-
       response_itel = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Certificado_itel.pdf')
       pdf_itel = BytesIO(response_itel.content)
-      st.download_button('Descargar', pdf_itel, 'Jossue_Itel.pdf','application/pdf')
+      st.download_button('Certificado', pdf_itel, 'Jossue_Itel.pdf','application/pdf')
   with col2:
       st.write("")
   with col3:
