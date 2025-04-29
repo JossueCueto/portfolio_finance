@@ -87,19 +87,40 @@ def run_perfil_profesional():
       pdf_fincorp = BytesIO(response_fincorp.content)
       st.download_button('Descargar', pdf_fincorp, 'Jossue_Fincorp.pdf','application/pdf')
   
-  st.header('Objetivos Profesionales para el 2024')
-  st.subheader('CEFA - BCRP')
-  st.write('Al haber sido seleccionado para participar en el Curso de Extensión de Finanzas Avanzadas ' + 
-            '(CEFA) organizado por el BCRP a realizarse de Enero a Marzo del 2024, me he propuesto absorber ' +
-             'todo el conocimiento y las experiencias que pueda. Este objetivo subraya mi pasión por enriquecer ' + 
-             'y expandir mi comprensión en el campo financiero, así como mi compromiso por crecer y superarme en un ' +
-             'entorno desafiante.')
+  st.header('Objetivos Profesionales para el 2025')
+  st.subheader('Acreditar mi Nivel de Inglés')
+  st.write('Siendo conciente de las exigencias del mercado respecto al dominio del idioma Inglés este año me propuse a acreditar mi nivel de inglés '+
+          'mediante una puntuación en el IELTS para fines de año.')
 
-  st.subheader('CFA')
-  st.write('Además, para el año 2024, me he propuesto aprobar el primer nivel del Chartered Financial ' +
-             'Analyst (CFA). Este objetivo es crucial para acreditar y consolidar mi conocimiento en finanzas, ' +
-             'representando un paso significativo hacia el reconocimiento profesional y la expansión de mis ' +
-             'competencias en el sector financiero global.')
+  st.subheader('FRM')
+  st.write('Como parte de mi búsqueda constante de capacitarme en el sector opté por rendir el examen FRM para Agosto ' +
+             'y así acreditar mis conocimientos en riesgos, valorización, estrategias de cobertura, regulación financiera' +
+             'y productos financieros')
+  st.header('Experiencia Específica')
+  st.subheader('Analista de Operaciones - Diviso Fondos SAF (2024-Actualidad)')
+  st.markdown("""
+  Encargado de la ejecución y mantenimiento de operaciones bursátiles y extrabursátiles.
+    - Ejecución y registro de operaciones de tipo de cambio, parte compradora y vendedora.
+    - Cierre y cuadre de bancos y custodio de valores al final de cada día y mes.
+    - Registro de eventos corporativos.
+    - Soporte en la post negociación de operaciones a la mesa de trading.
+    - Asignación diaria de operaciones de reporte, rueda local, rueda extranjera y extrabursátiles.
+    - Preparación de información y coordinación con el regulador (SMV).
+    - Revisión, registro y control documentario de clientes.
+    - Generación y Mantenimiento de Pólizas
+  """)
+  st.subheader('Prácticante de Operaciones - Diviso Fondos SAF (2024)')
+  st.markdown("""
+  Apoyo en la ejecución y mantenimiento de operaciones bursátiles y extrabursátiles (FX, Rueda, OTC, entre otros).
+  """)
+  st.write('**Logro:** Mejora del sistema de gestión de activos fijo e implementación del SSST')
+  st.subheader('Practicante Profesional del Departamento de Gestión de Portafolios de Inversión (2024)')
+  st.markdown("""
+  Dentro del marco del XVII Curso de Extensión de Finanzas Avanzadas.
+  - Formación relacionada a la gestión de carteras de inversión.
+  - Cursos relevantes: Análisis de Datos: Python, Derivados Financieros, Riesgos Financieros, Fundamentos de Banca, Estabilidad Financiera, Estrategias de Renta Fija, Gestión de Reservas: Juego de Negociación (con
+Bloomberg) y Operaciones Monetarias (con uso de Datatec).
+  """)  
   st.header('Experiencia adicional')
   st.subheader('Auxiliar Administrativo - SAEC EIRL (2021-2022)')
   st.markdown("""
