@@ -66,29 +66,23 @@ def run_perfil_profesional():
   col1, col2, col3, col4 = st.columns(4)
   with col1:
       # Contenido columna 1
-      st.markdown("<div style='text-align: center;'><strong>Renta Fija</strong></div>", unsafe_allow_html=True)
-      
       response_fixed_income = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Fixed_income.pdf')
       pdf_fixed_income = BytesIO(response_fixed_income.content)
-      st.download_button('Descargar', pdf_fixed_income, 'Jossue_Fixed_Income.pdf','application/pdf')
+      st.download_button('Renta Fija', pdf_fixed_income, 'Jossue_Fixed_Income.pdf','application/pdf')
   with col2:   
       response_market_risk = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Market_Risk.pdf')
       pdf_market_risk = BytesIO(response_market_risk.content)
       st.download_button('Riesgo de Mercado', pdf_fixed_income, 'Jossue_Market_Risk.pdf','application/pdf')
   with col3:
       # Contenido columna 3
-      st.markdown("<div style='text-align: center;'><strong>Riesgo de Crédito</strong></div>", unsafe_allow_html=True)
-      
       response_credit_risk = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Credit_Risk.pdf')
       pdf_credit_risk = BytesIO(response_credit_risk.content)
-      st.download_button('Descargar', pdf_credit_risk, 'Jossue_Credit_Risk.pdf','application/pdf')
+      st.download_button('Riesgo de Crédito', pdf_credit_risk, 'Jossue_Credit_Risk.pdf','application/pdf')
   with col4:
       # Contenido columna 4
-      st.markdown("<div style='text-align: center;'><strong>Fincorp</strong></div>", unsafe_allow_html=True)
-
       response_fincorp = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Fincorp.pdf')
       pdf_fincorp = BytesIO(response_fincorp.content)
-      st.download_button('Descargar', pdf_fincorp, 'Jossue_Fincorp.pdf','application/pdf')
+      st.download_button('Fincorp', pdf_fincorp, 'Jossue_Fincorp.pdf','application/pdf')
   
   st.header('Objetivos Profesionales para el 2025')
   st.subheader('Acreditar mi Nivel de Inglés')
