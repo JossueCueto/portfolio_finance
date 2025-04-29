@@ -117,7 +117,17 @@ def run_perfil_profesional():
   - Formación relacionada a la gestión de carteras de inversión.
   - Cursos relevantes: Análisis de Datos: Python, Derivados Financieros, Riesgos Financieros, Fundamentos de Banca, Estabilidad Financiera, Estrategias de Renta Fija, Gestión de Reservas: Juego de Negociación (con
 Bloomberg) y Operaciones Monetarias (con uso de Datatec).
-  """)  
+  """) 
+    col1, col2,col3= st.columns([1,1,2])
+  with col1:
+      # Contenido columna 1
+      response_itel = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Certificado_itel.pdf')
+      pdf_itel = BytesIO(response_itel.content)
+      st.download_button('Certificado', pdf_itel, 'Jossue_Itel.pdf','application/pdf')
+  with col2:
+      st.write("")
+  with col3:
+      st.write("")
   st.header('Experiencia adicional')
   st.subheader('Auxiliar Administrativo - SAEC EIRL (2021-2022)')
   st.markdown("""
