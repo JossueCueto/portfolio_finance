@@ -77,13 +77,10 @@ def run_perfil_profesional():
       response_fixed_income = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Fixed_income.pdf')
       pdf_fixed_income = BytesIO(response_fixed_income.content)
       st.download_button('Descargar', pdf_fixed_income, 'Jossue_Fixed_Income.pdf','application/pdf')
-  with col2:
-      # Contenido columna 2
-      st.markdown("<div style='text-align: center;'><strong>Riesgo de Mercado</strong></div>", unsafe_allow_html=True)
-    
+  with col2:   
       response_market_risk = requests.get('https://raw.github.com/JossueCueto/portfolio_finance/c9be76bf1429f6b81d541ff8316c21a5b0e9e186/PDF/Market_Risk.pdf')
       pdf_market_risk = BytesIO(response_market_risk.content)
-      st.download_button('Descargar', pdf_fixed_income, 'Jossue_Market_Risk.pdf','application/pdf')
+      st.download_button('Riesgo de Mercado', pdf_fixed_income, 'Jossue_Market_Risk.pdf','application/pdf')
   with col3:
       # Contenido columna 3
       st.markdown("<div style='text-align: center;'><strong>Riesgo de Crédito</strong></div>", unsafe_allow_html=True)
